@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Istanbul_urban_dbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="City_Growth">
+          <Key>
+            <PropertyRef Name="id_City_Growth" />
+          </Key>
+          <Property Name="id_City_Growth" Type="int" Nullable="false" />
+          <Property Name="Diagram" Type="image" />
+          <Property Name="Municipal_Border" Type="image" />
+          <Property Name="id_City_Maps" Type="int" />
+        </EntityType>
+        <EntityType Name="City_Maps">
+          <Key>
+            <PropertyRef Name="id_City_Maps" />
+          </Key>
+          <Property Name="id_City_Maps" Type="int" Nullable="false" />
+          <Property Name="Year_CM" Type="int" />
+          <Property Name="Image_CM" Type="image" />
+        </EntityType>
+        <EntityType Name="Major_Roads">
+          <Key>
+            <PropertyRef Name="id_Major_Roads" />
+          </Key>
+          <Property Name="id_Major_Roads" Type="int" Nullable="false" />
+          <Property Name="Year_MR" Type="int" />
+          <Property Name="Image_MR" Type="image" />
+          <Property Name="Scheme_MR" Type="geography" />
+        </EntityType>
+        <EntityType Name="Master_Plans">
+          <Key>
+            <PropertyRef Name="id_Master_Plans" />
+          </Key>
+          <Property Name="id_Master_Plans" Type="int" Nullable="false" />
+          <Property Name="Prost_Master_Plan" Type="image" />
+          <Property Name="Prost_Master_Plan_Model" Type="image" />
+          <Property Name="Piccinato_Settlement_Plan" Type="image" />
+        </EntityType>
+        <EntityType Name="Pervetitich_Maps">
+          <Key>
+            <PropertyRef Name="id_Pervetitich_Maps" />
+          </Key>
+          <Property Name="id_Pervetitich_Maps" Type="int" Nullable="false" />
+          <Property Name="Year_PM" Type="int" />
+          <Property Name="Name_PM" Type="varchar" MaxLength="50" />
+          <Property Name="Image_PM" Type="image" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="id_Photos" />
+          </Key>
+          <Property Name="id_Photos" Type="int" Nullable="false" />
+          <Property Name="id_City_Maps" Type="int" />
+          <Property Name="id_Regional_Maps" Type="int" />
+          <Property Name="id_Special_Maps" Type="int" />
+          <Property Name="id_Pervetitich_Maps" Type="int" />
+          <Property Name="id_Satellite_Maps" Type="int" />
+          <Property Name="id_Major_Roads" Type="int" />
+          <Property Name="Id_Spaces_of_Everyday_Life" Type="int" />
+          <Property Name="id_Transportation" Type="int" />
+          <Property Name="Year_Photos" Type="int" />
+          <Property Name="Count_Photos" Type="int" />
+          <Property Name="Image_Photos" Type="image" />
+        </EntityType>
+        <EntityType Name="Regional_Maps">
+          <Key>
+            <PropertyRef Name="id_Regional_Maps" />
+          </Key>
+          <Property Name="id_Regional_Maps" Type="int" Nullable="false" />
+          <Property Name="Year_RM" Type="int" />
+          <Property Name="Image_RM" Type="image" />
+        </EntityType>
+        <EntityType Name="Satellite_Maps">
+          <Key>
+            <PropertyRef Name="id_Satellite_Maps" />
+          </Key>
+          <Property Name="id_Satellite_Maps" Type="int" Nullable="false" />
+          <Property Name="Year_SAM" Type="int" />
+          <Property Name="image_SAM" Type="image" />
+        </EntityType>
+        <EntityType Name="Spaces_of_Everyday_Life">
+          <Key>
+            <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+          </Key>
+          <Property Name="Id_Spaces_of_Everyday_Life" Type="int" Nullable="false" />
+          <Property Name="Beaches" Type="geography" />
+          <Property Name="Casinos" Type="geography" />
+          <Property Name="Spaces_of_Beyoglu" Type="geography" />
+          <Property Name="Image_SEL" Type="image" />
+        </EntityType>
+        <EntityType Name="Special_Maps">
+          <Key>
+            <PropertyRef Name="id_Special_Maps" />
+          </Key>
+          <Property Name="id_Special_Maps" Type="int" Nullable="false" />
+          <Property Name="Year_SM" Type="int" />
+          <Property Name="Name_SM" Type="varchar" MaxLength="50" />
+          <Property Name="Image_SM" Type="image" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Transportation">
+          <Key>
+            <PropertyRef Name="id_Transportation" />
+          </Key>
+          <Property Name="id_Transportation" Type="int" Nullable="false" />
+          <Property Name="Year_T" Type="int" />
+          <Property Name="Name_T" Type="varchar" MaxLength="50" />
+          <Property Name="Image_T" Type="image" />
+          <Property Name="id_Master_Plans" Type="int" />
+        </EntityType>
+        <Association Name="FK_City_Growth_City_Maps">
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
+          <End Role="City_Growth" Type="Self.City_Growth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City_Maps">
+              <PropertyRef Name="id_City_Maps" />
+            </Principal>
+            <Dependent Role="City_Growth">
+              <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_City_Maps">
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City_Maps">
+              <PropertyRef Name="id_City_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Major_Roads">
+          <End Role="Major_Roads" Type="Self.Major_Roads" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Major_Roads">
+              <PropertyRef Name="id_Major_Roads" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Major_Roads" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Pervetitich_Maps">
+          <End Role="Pervetitich_Maps" Type="Self.Pervetitich_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pervetitich_Maps">
+              <PropertyRef Name="id_Pervetitich_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Pervetitich_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Regional_Maps">
+          <End Role="Regional_Maps" Type="Self.Regional_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regional_Maps">
+              <PropertyRef Name="id_Regional_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Regional_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Satellite_Maps">
+          <End Role="Satellite_Maps" Type="Self.Satellite_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Satellite_Maps">
+              <PropertyRef Name="id_Satellite_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Satellite_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Spaces_of_Everyday_Life">
+          <End Role="Spaces_of_Everyday_Life" Type="Self.Spaces_of_Everyday_Life" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Spaces_of_Everyday_Life">
+              <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Special_Maps">
+          <End Role="Special_Maps" Type="Self.Special_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Special_Maps">
+              <PropertyRef Name="id_Special_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Special_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Transportation">
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transportation">
+              <PropertyRef Name="id_Transportation" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Transportation" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transportation_Master_Plans">
+          <End Role="Master_Plans" Type="Self.Master_Plans" Multiplicity="0..1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Master_Plans">
+              <PropertyRef Name="id_Master_Plans" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="id_Master_Plans" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Хранилище Istanbul_urban_dbModelContainer">
+          <EntitySet Name="City_Growth" EntityType="Self.City_Growth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City_Maps" EntityType="Self.City_Maps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Major_Roads" EntityType="Self.Major_Roads" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Master_Plans" EntityType="Self.Master_Plans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pervetitich_Maps" EntityType="Self.Pervetitich_Maps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Regional_Maps" EntityType="Self.Regional_Maps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Satellite_Maps" EntityType="Self.Satellite_Maps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Spaces_of_Everyday_Life" EntityType="Self.Spaces_of_Everyday_Life" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Special_Maps" EntityType="Self.Special_Maps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transportation" EntityType="Self.Transportation" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_City_Growth_City_Maps" Association="Self.FK_City_Growth_City_Maps">
+            <End Role="City_Maps" EntitySet="City_Maps" />
+            <End Role="City_Growth" EntitySet="City_Growth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_City_Maps" Association="Self.FK_Photos_City_Maps">
+            <End Role="City_Maps" EntitySet="City_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Major_Roads" Association="Self.FK_Photos_Major_Roads">
+            <End Role="Major_Roads" EntitySet="Major_Roads" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Pervetitich_Maps" Association="Self.FK_Photos_Pervetitich_Maps">
+            <End Role="Pervetitich_Maps" EntitySet="Pervetitich_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Regional_Maps" Association="Self.FK_Photos_Regional_Maps">
+            <End Role="Regional_Maps" EntitySet="Regional_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Satellite_Maps" Association="Self.FK_Photos_Satellite_Maps">
+            <End Role="Satellite_Maps" EntitySet="Satellite_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Spaces_of_Everyday_Life" Association="Self.FK_Photos_Spaces_of_Everyday_Life">
+            <End Role="Spaces_of_Everyday_Life" EntitySet="Spaces_of_Everyday_Life" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Special_Maps" Association="Self.FK_Photos_Special_Maps">
+            <End Role="Special_Maps" EntitySet="Special_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Transportation" Association="Self.FK_Photos_Transportation">
+            <End Role="Transportation" EntitySet="Transportation" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transportation_Master_Plans" Association="Self.FK_Transportation_Master_Plans">
+            <End Role="Master_Plans" EntitySet="Master_Plans" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Istanbul_urban_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="City_Growth">
+          <Key>
+            <PropertyRef Name="id_City_Growth" />
+          </Key>
+          <Property Name="id_City_Growth" Type="Int32" Nullable="false" />
+          <Property Name="Diagram" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Municipal_Border" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="id_City_Maps" Type="Int32" />
+          <NavigationProperty Name="City_Maps" Relationship="Self.FK_City_Growth_City_Maps" FromRole="City_Growth" ToRole="City_Maps" />
+        </EntityType>
+        <EntityType Name="City_Maps">
+          <Key>
+            <PropertyRef Name="id_City_Maps" />
+          </Key>
+          <Property Name="id_City_Maps" Type="Int32" Nullable="false" />
+          <Property Name="Year_CM" Type="Int32" />
+          <Property Name="Image_CM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="City_Growth" Relationship="Self.FK_City_Growth_City_Maps" FromRole="City_Maps" ToRole="City_Growth" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_City_Maps" FromRole="City_Maps" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Major_Roads">
+          <Key>
+            <PropertyRef Name="id_Major_Roads" />
+          </Key>
+          <Property Name="id_Major_Roads" Type="Int32" Nullable="false" />
+          <Property Name="Year_MR" Type="Int32" />
+          <Property Name="Image_MR" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Scheme_MR" Type="Geography" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Major_Roads" FromRole="Major_Roads" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Master_Plans">
+          <Key>
+            <PropertyRef Name="id_Master_Plans" />
+          </Key>
+          <Property Name="id_Master_Plans" Type="Int32" Nullable="false" />
+          <Property Name="Prost_Master_Plan" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Prost_Master_Plan_Model" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Piccinato_Settlement_Plan" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Transportation" Relationship="Self.FK_Transportation_Master_Plans" FromRole="Master_Plans" ToRole="Transportation" />
+        </EntityType>
+        <EntityType Name="Pervetitich_Maps">
+          <Key>
+            <PropertyRef Name="id_Pervetitich_Maps" />
+          </Key>
+          <Property Name="id_Pervetitich_Maps" Type="Int32" Nullable="false" />
+          <Property Name="Year_PM" Type="Int32" />
+          <Property Name="Name_PM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image_PM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Pervetitich_Maps" FromRole="Pervetitich_Maps" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="id_Photos" />
+          </Key>
+          <Property Name="id_Photos" Type="Int32" Nullable="false" />
+          <Property Name="id_City_Maps" Type="Int32" />
+          <Property Name="id_Regional_Maps" Type="Int32" />
+          <Property Name="id_Special_Maps" Type="Int32" />
+          <Property Name="id_Pervetitich_Maps" Type="Int32" />
+          <Property Name="id_Satellite_Maps" Type="Int32" />
+          <Property Name="id_Major_Roads" Type="Int32" />
+          <Property Name="Id_Spaces_of_Everyday_Life" Type="Int32" />
+          <Property Name="id_Transportation" Type="Int32" />
+          <Property Name="Year_Photos" Type="Int32" />
+          <Property Name="Count_Photos" Type="Int32" />
+          <Property Name="Image_Photos" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="City_Maps" Relationship="Self.FK_Photos_City_Maps" FromRole="Photos" ToRole="City_Maps" />
+          <NavigationProperty Name="Major_Roads" Relationship="Self.FK_Photos_Major_Roads" FromRole="Photos" ToRole="Major_Roads" />
+          <NavigationProperty Name="Pervetitich_Maps" Relationship="Self.FK_Photos_Pervetitich_Maps" FromRole="Photos" ToRole="Pervetitich_Maps" />
+          <NavigationProperty Name="Regional_Maps" Relationship="Self.FK_Photos_Regional_Maps" FromRole="Photos" ToRole="Regional_Maps" />
+          <NavigationProperty Name="Satellite_Maps" Relationship="Self.FK_Photos_Satellite_Maps" FromRole="Photos" ToRole="Satellite_Maps" />
+          <NavigationProperty Name="Spaces_of_Everyday_Life" Relationship="Self.FK_Photos_Spaces_of_Everyday_Life" FromRole="Photos" ToRole="Spaces_of_Everyday_Life" />
+          <NavigationProperty Name="Special_Maps" Relationship="Self.FK_Photos_Special_Maps" FromRole="Photos" ToRole="Special_Maps" />
+          <NavigationProperty Name="Transportation" Relationship="Self.FK_Photos_Transportation" FromRole="Photos" ToRole="Transportation" />
+        </EntityType>
+        <EntityType Name="Regional_Maps">
+          <Key>
+            <PropertyRef Name="id_Regional_Maps" />
+          </Key>
+          <Property Name="id_Regional_Maps" Type="Int32" Nullable="false" />
+          <Property Name="Year_RM" Type="Int32" />
+          <Property Name="Image_RM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Regional_Maps" FromRole="Regional_Maps" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Satellite_Maps">
+          <Key>
+            <PropertyRef Name="id_Satellite_Maps" />
+          </Key>
+          <Property Name="id_Satellite_Maps" Type="Int32" Nullable="false" />
+          <Property Name="Year_SAM" Type="Int32" />
+          <Property Name="image_SAM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Satellite_Maps" FromRole="Satellite_Maps" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Spaces_of_Everyday_Life">
+          <Key>
+            <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+          </Key>
+          <Property Name="Id_Spaces_of_Everyday_Life" Type="Int32" Nullable="false" />
+          <Property Name="Beaches" Type="Geography" />
+          <Property Name="Casinos" Type="Geography" />
+          <Property Name="Spaces_of_Beyoglu" Type="Geography" />
+          <Property Name="Image_SEL" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Spaces_of_Everyday_Life" FromRole="Spaces_of_Everyday_Life" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="Special_Maps">
+          <Key>
+            <PropertyRef Name="id_Special_Maps" />
+          </Key>
+          <Property Name="id_Special_Maps" Type="Int32" Nullable="false" />
+          <Property Name="Year_SM" Type="Int32" />
+          <Property Name="Name_SM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image_SM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Special_Maps" FromRole="Special_Maps" ToRole="Photos" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Transportation">
+          <Key>
+            <PropertyRef Name="id_Transportation" />
+          </Key>
+          <Property Name="id_Transportation" Type="Int32" Nullable="false" />
+          <Property Name="Year_T" Type="Int32" />
+          <Property Name="Name_T" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image_T" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="id_Master_Plans" Type="Int32" />
+          <NavigationProperty Name="Master_Plans" Relationship="Self.FK_Transportation_Master_Plans" FromRole="Transportation" ToRole="Master_Plans" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Transportation" FromRole="Transportation" ToRole="Photos" />
+        </EntityType>
+        <Association Name="FK_City_Growth_City_Maps">
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
+          <End Role="City_Growth" Type="Self.City_Growth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City_Maps">
+              <PropertyRef Name="id_City_Maps" />
+            </Principal>
+            <Dependent Role="City_Growth">
+              <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_City_Maps">
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City_Maps">
+              <PropertyRef Name="id_City_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Major_Roads">
+          <End Role="Major_Roads" Type="Self.Major_Roads" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Major_Roads">
+              <PropertyRef Name="id_Major_Roads" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Major_Roads" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transportation_Master_Plans">
+          <End Role="Master_Plans" Type="Self.Master_Plans" Multiplicity="0..1" />
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Master_Plans">
+              <PropertyRef Name="id_Master_Plans" />
+            </Principal>
+            <Dependent Role="Transportation">
+              <PropertyRef Name="id_Master_Plans" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Pervetitich_Maps">
+          <End Role="Pervetitich_Maps" Type="Self.Pervetitich_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pervetitich_Maps">
+              <PropertyRef Name="id_Pervetitich_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Pervetitich_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Regional_Maps">
+          <End Role="Regional_Maps" Type="Self.Regional_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regional_Maps">
+              <PropertyRef Name="id_Regional_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Regional_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Satellite_Maps">
+          <End Role="Satellite_Maps" Type="Self.Satellite_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Satellite_Maps">
+              <PropertyRef Name="id_Satellite_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Satellite_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Spaces_of_Everyday_Life">
+          <End Role="Spaces_of_Everyday_Life" Type="Self.Spaces_of_Everyday_Life" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Spaces_of_Everyday_Life">
+              <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="Id_Spaces_of_Everyday_Life" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Special_Maps">
+          <End Role="Special_Maps" Type="Self.Special_Maps" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Special_Maps">
+              <PropertyRef Name="id_Special_Maps" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Special_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Transportation">
+          <End Role="Transportation" Type="Self.Transportation" Multiplicity="0..1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transportation">
+              <PropertyRef Name="id_Transportation" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="id_Transportation" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Istanbul_urban_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="City_Growth" EntityType="Self.City_Growth" />
+          <EntitySet Name="City_Maps" EntityType="Self.City_Maps" />
+          <EntitySet Name="Major_Roads" EntityType="Self.Major_Roads" />
+          <EntitySet Name="Master_Plans" EntityType="Self.Master_Plans" />
+          <EntitySet Name="Pervetitich_Maps" EntityType="Self.Pervetitich_Maps" />
+          <EntitySet Name="Photos" EntityType="Self.Photos" />
+          <EntitySet Name="Regional_Maps" EntityType="Self.Regional_Maps" />
+          <EntitySet Name="Satellite_Maps" EntityType="Self.Satellite_Maps" />
+          <EntitySet Name="Spaces_of_Everyday_Life" EntityType="Self.Spaces_of_Everyday_Life" />
+          <EntitySet Name="Special_Maps" EntityType="Self.Special_Maps" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Transportation" EntityType="Self.Transportation" />
+          <AssociationSet Name="FK_City_Growth_City_Maps" Association="Self.FK_City_Growth_City_Maps">
+            <End Role="City_Maps" EntitySet="City_Maps" />
+            <End Role="City_Growth" EntitySet="City_Growth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_City_Maps" Association="Self.FK_Photos_City_Maps">
+            <End Role="City_Maps" EntitySet="City_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Major_Roads" Association="Self.FK_Photos_Major_Roads">
+            <End Role="Major_Roads" EntitySet="Major_Roads" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transportation_Master_Plans" Association="Self.FK_Transportation_Master_Plans">
+            <End Role="Master_Plans" EntitySet="Master_Plans" />
+            <End Role="Transportation" EntitySet="Transportation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Pervetitich_Maps" Association="Self.FK_Photos_Pervetitich_Maps">
+            <End Role="Pervetitich_Maps" EntitySet="Pervetitich_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Regional_Maps" Association="Self.FK_Photos_Regional_Maps">
+            <End Role="Regional_Maps" EntitySet="Regional_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Satellite_Maps" Association="Self.FK_Photos_Satellite_Maps">
+            <End Role="Satellite_Maps" EntitySet="Satellite_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Spaces_of_Everyday_Life" Association="Self.FK_Photos_Spaces_of_Everyday_Life">
+            <End Role="Spaces_of_Everyday_Life" EntitySet="Spaces_of_Everyday_Life" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Special_Maps" Association="Self.FK_Photos_Special_Maps">
+            <End Role="Special_Maps" EntitySet="Special_Maps" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Transportation" Association="Self.FK_Photos_Transportation">
+            <End Role="Transportation" EntitySet="Transportation" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Istanbul_urban_dbModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Istanbul_urban_dbModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Istanbul_urban_dbModelContainer" CdmEntityContainer="Istanbul_urban_dbEntities">
+          <EntitySetMapping Name="City_Growth">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.City_Growth">
+              <MappingFragment StoreEntitySet="City_Growth">
+                <ScalarProperty Name="id_City_Growth" ColumnName="id_City_Growth" />
+                <ScalarProperty Name="Diagram" ColumnName="Diagram" />
+                <ScalarProperty Name="Municipal_Border" ColumnName="Municipal_Border" />
+                <ScalarProperty Name="id_City_Maps" ColumnName="id_City_Maps" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="City_Maps">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.City_Maps">
+              <MappingFragment StoreEntitySet="City_Maps">
+                <ScalarProperty Name="id_City_Maps" ColumnName="id_City_Maps" />
+                <ScalarProperty Name="Year_CM" ColumnName="Year_CM" />
+                <ScalarProperty Name="Image_CM" ColumnName="Image_CM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Major_Roads">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Major_Roads">
+              <MappingFragment StoreEntitySet="Major_Roads">
+                <ScalarProperty Name="id_Major_Roads" ColumnName="id_Major_Roads" />
+                <ScalarProperty Name="Year_MR" ColumnName="Year_MR" />
+                <ScalarProperty Name="Image_MR" ColumnName="Image_MR" />
+                <ScalarProperty Name="Scheme_MR" ColumnName="Scheme_MR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Master_Plans">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Master_Plans">
+              <MappingFragment StoreEntitySet="Master_Plans">
+                <ScalarProperty Name="id_Master_Plans" ColumnName="id_Master_Plans" />
+                <ScalarProperty Name="Prost_Master_Plan" ColumnName="Prost_Master_Plan" />
+                <ScalarProperty Name="Prost_Master_Plan_Model" ColumnName="Prost_Master_Plan_Model" />
+                <ScalarProperty Name="Piccinato_Settlement_Plan" ColumnName="Piccinato_Settlement_Plan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pervetitich_Maps">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Pervetitich_Maps">
+              <MappingFragment StoreEntitySet="Pervetitich_Maps">
+                <ScalarProperty Name="id_Pervetitich_Maps" ColumnName="id_Pervetitich_Maps" />
+                <ScalarProperty Name="Year_PM" ColumnName="Year_PM" />
+                <ScalarProperty Name="Name_PM" ColumnName="Name_PM" />
+                <ScalarProperty Name="Image_PM" ColumnName="Image_PM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Photos">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Photos">
+              <MappingFragment StoreEntitySet="Photos">
+                <ScalarProperty Name="id_Photos" ColumnName="id_Photos" />
+                <ScalarProperty Name="id_City_Maps" ColumnName="id_City_Maps" />
+                <ScalarProperty Name="id_Regional_Maps" ColumnName="id_Regional_Maps" />
+                <ScalarProperty Name="id_Special_Maps" ColumnName="id_Special_Maps" />
+                <ScalarProperty Name="id_Pervetitich_Maps" ColumnName="id_Pervetitich_Maps" />
+                <ScalarProperty Name="id_Satellite_Maps" ColumnName="id_Satellite_Maps" />
+                <ScalarProperty Name="id_Major_Roads" ColumnName="id_Major_Roads" />
+                <ScalarProperty Name="Id_Spaces_of_Everyday_Life" ColumnName="Id_Spaces_of_Everyday_Life" />
+                <ScalarProperty Name="id_Transportation" ColumnName="id_Transportation" />
+                <ScalarProperty Name="Year_Photos" ColumnName="Year_Photos" />
+                <ScalarProperty Name="Count_Photos" ColumnName="Count_Photos" />
+                <ScalarProperty Name="Image_Photos" ColumnName="Image_Photos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regional_Maps">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Regional_Maps">
+              <MappingFragment StoreEntitySet="Regional_Maps">
+                <ScalarProperty Name="id_Regional_Maps" ColumnName="id_Regional_Maps" />
+                <ScalarProperty Name="Year_RM" ColumnName="Year_RM" />
+                <ScalarProperty Name="Image_RM" ColumnName="Image_RM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Satellite_Maps">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Satellite_Maps">
+              <MappingFragment StoreEntitySet="Satellite_Maps">
+                <ScalarProperty Name="id_Satellite_Maps" ColumnName="id_Satellite_Maps" />
+                <ScalarProperty Name="Year_SAM" ColumnName="Year_SAM" />
+                <ScalarProperty Name="image_SAM" ColumnName="image_SAM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Spaces_of_Everyday_Life">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Spaces_of_Everyday_Life">
+              <MappingFragment StoreEntitySet="Spaces_of_Everyday_Life">
+                <ScalarProperty Name="Id_Spaces_of_Everyday_Life" ColumnName="Id_Spaces_of_Everyday_Life" />
+                <ScalarProperty Name="Beaches" ColumnName="Beaches" />
+                <ScalarProperty Name="Casinos" ColumnName="Casinos" />
+                <ScalarProperty Name="Spaces_of_Beyoglu" ColumnName="Spaces_of_Beyoglu" />
+                <ScalarProperty Name="Image_SEL" ColumnName="Image_SEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Special_Maps">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Special_Maps">
+              <MappingFragment StoreEntitySet="Special_Maps">
+                <ScalarProperty Name="id_Special_Maps" ColumnName="id_Special_Maps" />
+                <ScalarProperty Name="Year_SM" ColumnName="Year_SM" />
+                <ScalarProperty Name="Name_SM" ColumnName="Name_SM" />
+                <ScalarProperty Name="Image_SM" ColumnName="Image_SM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transportation">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.Transportation">
+              <MappingFragment StoreEntitySet="Transportation">
+                <ScalarProperty Name="id_Transportation" ColumnName="id_Transportation" />
+                <ScalarProperty Name="Year_T" ColumnName="Year_T" />
+                <ScalarProperty Name="Name_T" ColumnName="Name_T" />
+                <ScalarProperty Name="Image_T" ColumnName="Image_T" />
+                <ScalarProperty Name="id_Master_Plans" ColumnName="id_Master_Plans" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Istanbul_urban_dbModel.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Istanbul_urban_dbModel.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Istanbul_urban_dbModel.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Istanbul_urban_dbModel.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Istanbul_urban_dbModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Istanbul_urban_dbModel.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Istanbul_urban_dbModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Istanbul_urban_dbModel.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Istanbul_urban_dbModel.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
