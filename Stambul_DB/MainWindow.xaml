@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stambul_DB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1024" Width="1440" Background="Black">
     <Grid>
-        
+
+        <Ellipse HorizontalAlignment="Left" Height="100" Margin="653,157,0,0" Stroke="#FFF1E9E9" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.33,0.3">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="file:///C:/Users/пк/source/repos/Stambul_DB/Stambul_DB/Res/Icons/User.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="545,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <Button Content="Sign-in" HorizontalAlignment="Left" Margin="618,431,0,0" VerticalAlignment="Top" Width="178" Height="40" Background="#FFF9F9F9">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Sign-up" HorizontalAlignment="Left" Margin="618,485,0,0" VerticalAlignment="Top" Width="178" Height="37" Background="#FF88119B">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="Authorization" HorizontalAlignment="Left" Margin="618,112,0,0" TextWrapping="Wrap" Text="Authorization" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="212" FontSize="30"/>
+        <TextBlock x:Name="Authorization_Copy" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
+
     </Grid>
 </Window>
