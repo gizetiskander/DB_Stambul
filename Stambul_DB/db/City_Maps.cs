@@ -7,25 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Spaces_of_Everyday_Life
+    public partial class City_Maps
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Spaces_of_Everyday_Life()
+        public City_Maps()
         {
+            this.City_Growth = new HashSet<City_Growth>();
             this.Photos = new HashSet<Photos>();
         }
     
-        public int Id_Spaces_of_Everyday_Life { get; set; }
-        public System.Data.Entity.Spatial.DbGeography Beaches { get; set; }
-        public System.Data.Entity.Spatial.DbGeography Casinos { get; set; }
-        public System.Data.Entity.Spatial.DbGeography Spaces_of_Beyoglu { get; set; }
-        public byte[] Image_SEL { get; set; }
+        public int id_City_Maps { get; set; }
+        public Nullable<int> Year_CM { get; set; }
+        public byte[] Image_CM { get; set; }
+        public Nullable<int> Id_User { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<City_Growth> City_Growth { get; set; }
+        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
     }

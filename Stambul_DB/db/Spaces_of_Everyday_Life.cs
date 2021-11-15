@@ -7,25 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Master_Plans
+    public partial class Spaces_of_Everyday_Life
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Master_Plans()
+        public Spaces_of_Everyday_Life()
         {
-            this.Transportation = new HashSet<Transportation>();
+            this.Photos = new HashSet<Photos>();
         }
     
-        public int id_Master_Plans { get; set; }
-        public byte[] Prost_Master_Plan { get; set; }
-        public byte[] Prost_Master_Plan_Model { get; set; }
-        public byte[] Piccinato_Settlement_Plan { get; set; }
+        public int Id_Spaces_of_Everyday_Life { get; set; }
+        public System.Data.Entity.Spatial.DbGeography Beaches { get; set; }
+        public System.Data.Entity.Spatial.DbGeography Casinos { get; set; }
+        public System.Data.Entity.Spatial.DbGeography Spaces_of_Beyoglu { get; set; }
+        public byte[] Image_SEL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Transportation> Transportation { get; set; }
+        public virtual ICollection<Photos> Photos { get; set; }
     }
 }

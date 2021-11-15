@@ -12,31 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data.SqlClient;
-using System.Data;
-using System.Configuration;
 using Stambul_DB.db;
 using Stambul_DB.Pages;
 
-namespace Stambul_DB
+namespace Stambul_DB.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Registration : Page
     {
-
-        public MainWindow()
+        public Registration()
         {
             InitializeComponent();
-            
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Pages/Registration.xaml", UriKind.Relative);
-            window.Show();
+
         }
     }
 }

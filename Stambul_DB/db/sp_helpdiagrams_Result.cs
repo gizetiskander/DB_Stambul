@@ -7,18 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class City_Growth
+    public partial class sp_helpdiagrams_Result
     {
-        public int id_City_Growth { get; set; }
-        public byte[] Diagram { get; set; }
-        public byte[] Municipal_Border { get; set; }
-        public Nullable<int> id_City_Maps { get; set; }
-    
-        public virtual City_Maps City_Maps { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

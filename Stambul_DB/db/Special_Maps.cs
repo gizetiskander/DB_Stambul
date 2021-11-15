@@ -7,26 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Transportation
+    public partial class Special_Maps
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Transportation()
+        public Special_Maps()
         {
             this.Photos = new HashSet<Photos>();
         }
     
-        public int id_Transportation { get; set; }
-        public Nullable<int> Year_T { get; set; }
-        public string Name_T { get; set; }
-        public byte[] Image_T { get; set; }
-        public Nullable<int> id_Master_Plans { get; set; }
+        public int id_Special_Maps { get; set; }
+        public Nullable<int> Year_SM { get; set; }
+        public string Name_SM { get; set; }
+        public byte[] Image_SM { get; set; }
     
-        public virtual Master_Plans Master_Plans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
     }

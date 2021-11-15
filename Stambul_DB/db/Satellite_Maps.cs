@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class City_Maps
+    public partial class Satellite_Maps
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City_Maps()
+        public Satellite_Maps()
         {
-            this.City_Growth = new HashSet<City_Growth>();
             this.Photos = new HashSet<Photos>();
         }
     
-        public int id_City_Maps { get; set; }
-        public Nullable<int> Year_CM { get; set; }
-        public byte[] Image_CM { get; set; }
+        public int id_Satellite_Maps { get; set; }
+        public Nullable<int> Year_SAM { get; set; }
+        public byte[] image_SAM { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<City_Growth> City_Growth { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
     }

@@ -21,6 +21,7 @@
           <Property Name="id_City_Maps" Type="int" Nullable="false" />
           <Property Name="Year_CM" Type="int" />
           <Property Name="Image_CM" Type="image" />
+          <Property Name="Id_User" Type="int" />
         </EntityType>
         <EntityType Name="Major_Roads">
           <Key>
@@ -121,6 +122,16 @@
           <Property Name="Image_T" Type="image" />
           <Property Name="id_Master_Plans" Type="int" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id_User" />
+          </Key>
+          <Property Name="Id_User" Type="int" Nullable="false" />
+          <Property Name="User_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
         <Association Name="FK_City_Growth_City_Maps">
           <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
           <End Role="City_Growth" Type="Self.City_Growth" Multiplicity="*" />
@@ -130,6 +141,18 @@
             </Principal>
             <Dependent Role="City_Growth">
               <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_Maps_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id_User" />
+            </Principal>
+            <Dependent Role="City_Maps">
+              <PropertyRef Name="Id_User" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -285,9 +308,14 @@
           <EntitySet Name="Special_Maps" EntityType="Self.Special_Maps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Transportation" EntityType="Self.Transportation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_City_Growth_City_Maps" Association="Self.FK_City_Growth_City_Maps">
             <End Role="City_Maps" EntitySet="City_Maps" />
             <End Role="City_Growth" EntitySet="City_Growth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_Maps_User" Association="Self.FK_City_Maps_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="City_Maps" EntitySet="City_Maps" />
           </AssociationSet>
           <AssociationSet Name="FK_Photos_City_Maps" Association="Self.FK_Photos_City_Maps">
             <End Role="City_Maps" EntitySet="City_Maps" />
@@ -348,7 +376,9 @@
           <Property Name="id_City_Maps" Type="Int32" Nullable="false" />
           <Property Name="Year_CM" Type="Int32" />
           <Property Name="Image_CM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Id_User" Type="Int32" />
           <NavigationProperty Name="City_Growth" Relationship="Self.FK_City_Growth_City_Maps" FromRole="City_Maps" ToRole="City_Growth" />
+          <NavigationProperty Name="User" Relationship="Self.FK_City_Maps_User" FromRole="City_Maps" ToRole="User" />
           <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_City_Maps" FromRole="City_Maps" ToRole="Photos" />
         </EntityType>
         <EntityType Name="Major_Roads">
@@ -467,6 +497,17 @@
           <NavigationProperty Name="Master_Plans" Relationship="Self.FK_Transportation_Master_Plans" FromRole="Transportation" ToRole="Master_Plans" />
           <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_Transportation" FromRole="Transportation" ToRole="Photos" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id_User" />
+          </Key>
+          <Property Name="Id_User" Type="Int32" Nullable="false" />
+          <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="City_Maps" Relationship="Self.FK_City_Maps_User" FromRole="User" ToRole="City_Maps" />
+        </EntityType>
         <Association Name="FK_City_Growth_City_Maps">
           <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="0..1" />
           <End Role="City_Growth" Type="Self.City_Growth" Multiplicity="*" />
@@ -476,6 +517,18 @@
             </Principal>
             <Dependent Role="City_Growth">
               <PropertyRef Name="id_City_Maps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_Maps_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="City_Maps" Type="Self.City_Maps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id_User" />
+            </Principal>
+            <Dependent Role="City_Maps">
+              <PropertyRef Name="Id_User" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -600,9 +653,14 @@
           <EntitySet Name="Special_Maps" EntityType="Self.Special_Maps" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Transportation" EntityType="Self.Transportation" />
+          <EntitySet Name="User" EntityType="Self.User" />
           <AssociationSet Name="FK_City_Growth_City_Maps" Association="Self.FK_City_Growth_City_Maps">
             <End Role="City_Maps" EntitySet="City_Maps" />
             <End Role="City_Growth" EntitySet="City_Growth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_Maps_User" Association="Self.FK_City_Maps_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="City_Maps" EntitySet="City_Maps" />
           </AssociationSet>
           <AssociationSet Name="FK_Photos_City_Maps" Association="Self.FK_Photos_City_Maps">
             <End Role="City_Maps" EntitySet="City_Maps" />
@@ -704,6 +762,7 @@
                 <ScalarProperty Name="id_City_Maps" ColumnName="id_City_Maps" />
                 <ScalarProperty Name="Year_CM" ColumnName="Year_CM" />
                 <ScalarProperty Name="Image_CM" ColumnName="Image_CM" />
+                <ScalarProperty Name="Id_User" ColumnName="Id_User" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -813,6 +872,17 @@
                 <ScalarProperty Name="Name_T" ColumnName="Name_T" />
                 <ScalarProperty Name="Image_T" ColumnName="Image_T" />
                 <ScalarProperty Name="id_Master_Plans" ColumnName="id_Master_Plans" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="Istanbul_urban_dbModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

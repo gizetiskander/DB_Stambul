@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Data.Entity;
@@ -39,6 +39,7 @@ namespace Stambul_DB
         public virtual DbSet<Special_Maps> Special_Maps { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Transportation> Transportation { get; set; }
+        public virtual DbSet<User> User { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

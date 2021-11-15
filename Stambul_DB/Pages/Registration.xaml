@@ -1,0 +1,32 @@
+﻿<Page x:Class="Stambul_DB.Pages.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Stambul_DB.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1024
+      " d:DesignWidth="1440" Background="Black"
+      Title="Registration">
+
+    <Grid>
+        <Ellipse HorizontalAlignment="Left" Height="100" Margin="653,157,0,0" Stroke="#FFF1E9E9" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.33,0.3">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="file:///C:/Users/пк/source/repos/Stambul_DB/Stambul_DB/Res/Icons/User.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="45" Margin="545,360,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <Button x:Name="SignUp" Content="Sign-up" HorizontalAlignment="Left" Margin="572,572,0,0"  VerticalAlignment="Top" Width="263" Height="40" Background="#FF88119B" Click="SignUp_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="Ragistration" HorizontalAlignment="Left" Margin="602,104,0,0" TextWrapping="Wrap" Text="Registartion" VerticalAlignment="Top" Foreground="#FF88119B" Height="70" Width="212" FontSize="36"/>
+        <TextBlock x:Name="ISTANBULDB" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,428,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="545,500,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+    </Grid>
+</Page>

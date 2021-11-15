@@ -7,13 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_helpdiagramdefinition_Result
+    public partial class City_Growth
     {
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int id_City_Growth { get; set; }
+        public byte[] Diagram { get; set; }
+        public byte[] Municipal_Border { get; set; }
+        public Nullable<int> id_City_Maps { get; set; }
+    
+        public virtual City_Maps City_Maps { get; set; }
     }
 }

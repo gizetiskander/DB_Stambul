@@ -14,7 +14,7 @@
             </Ellipse.Fill>
         </Ellipse>
         <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="545,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="541,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
         <Button Content="Sign-in" HorizontalAlignment="Left" Margin="618,431,0,0" VerticalAlignment="Top" Width="178" Height="40" Background="#FFF9F9F9">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -22,15 +22,16 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Sign-up" HorizontalAlignment="Left" Margin="618,485,0,0" VerticalAlignment="Top" Width="178" Height="37" Background="#FF88119B">
+        <Button x:Name="SignUp" Content="Sign-up" HorizontalAlignment="Left" Margin="618,485,0,0" VerticalAlignment="Top" Width="178" Height="37" Background="#FF88119B" Click="SignUp_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
+
         </Button>
         <TextBlock x:Name="Authorization" HorizontalAlignment="Left" Margin="618,112,0,0" TextWrapping="Wrap" Text="Authorization" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="212" FontSize="30"/>
-        <TextBlock x:Name="Authorization_Copy" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
+        <TextBlock x:Name="ISTANBULDB" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
 
     </Grid>
 </Window>

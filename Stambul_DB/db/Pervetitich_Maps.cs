@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stambul_DB
+namespace Stambul_DB.db
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Major_Roads
+    public partial class Pervetitich_Maps
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Major_Roads()
+        public Pervetitich_Maps()
         {
             this.Photos = new HashSet<Photos>();
         }
     
-        public int id_Major_Roads { get; set; }
-        public Nullable<int> Year_MR { get; set; }
-        public byte[] Image_MR { get; set; }
-        public System.Data.Entity.Spatial.DbGeography Scheme_MR { get; set; }
+        public int id_Pervetitich_Maps { get; set; }
+        public Nullable<int> Year_PM { get; set; }
+        public string Name_PM { get; set; }
+        public byte[] Image_PM { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
