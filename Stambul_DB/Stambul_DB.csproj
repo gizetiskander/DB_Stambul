@@ -66,70 +66,73 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="db\City_Growth.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="db\City_Maps.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\IstanbulDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IstanbulDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\IstanbulDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\IstanbulDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IstanbulDB.edmx</DependentUpon>
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="db\Major_Roads.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="db\Master_Plans.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Pervetitich_Maps.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Photos.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Regional_Maps.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Role.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Satellite_Maps.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Spaces_of_Everyday_Life.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Special_Maps.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Stambul_DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stambul_DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Stambul_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Stambul_DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stambul_DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="db\sysdiagrams.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Transportation.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\User.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\IstanbulDB.xaml.cs">
       <DependentUpon>IstanbulDB.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="db\Pervetitich_Maps.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Photos.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Regional_Maps.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Satellite_Maps.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Spaces_of_Everyday_Life.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Special_Maps.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\sp_helpdiagrams_Result.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\sysdiagrams.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\Transportation.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\User.cs">
-      <DependentUpon>IstanbulDB.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -170,12 +173,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="db\IstanbulDB.edmx">
+    <EntityDeploy Include="db\Stambul_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IstanbulDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>Stambul_DB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="db\IstanbulDB.edmx.diagram">
-      <DependentUpon>IstanbulDB.edmx</DependentUpon>
+    <None Include="db\Stambul_DB.edmx.diagram">
+      <DependentUpon>Stambul_DB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,15 +197,15 @@
     <Folder Include="Res\Maps\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db\IstanbulDB.Context.tt">
+    <Content Include="db\Stambul_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IstanbulDB.edmx</DependentUpon>
-      <LastGenOutput>IstanbulDB.Context.cs</LastGenOutput>
+      <DependentUpon>Stambul_DB.edmx</DependentUpon>
+      <LastGenOutput>Stambul_DB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="db\IstanbulDB.tt">
+    <Content Include="db\Stambul_DB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IstanbulDB.edmx</DependentUpon>
-      <LastGenOutput>IstanbulDB.cs</LastGenOutput>
+      <DependentUpon>Stambul_DB.edmx</DependentUpon>
+      <LastGenOutput>Stambul_DB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

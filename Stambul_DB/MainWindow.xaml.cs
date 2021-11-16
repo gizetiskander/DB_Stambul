@@ -25,7 +25,8 @@ namespace Stambul_DB
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        public static Istanbul_urban_dbEntities dbEntities = new Istanbul_urban_dbEntities();
+        public static User authUser;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +38,27 @@ namespace Stambul_DB
             NavigationWindow window = new NavigationWindow();
             window.Source = new Uri("Pages/Registration.xaml", UriKind.Relative);
             window.Show();
+        }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var user in MainWindow.dbEntities.User)
+            {
+                if (user.Login == Login.Text.Trim())
+                {
+                    if (user.Password == Password.Text.Trim() && user.Id_Role == 2)
+                    {
+                        MessageBox.Show($"Привет Пользователь {user.Login}");
+                        MainWindow.authUser = user;
+                        MessageBox.Show($"{MainWindow.authUser}");
+                    }
+                    if (user.Password == Password.Text.Trim() && user.Id_Role == 1)
+                    {
+                        MessageBox.Show($"Привет админ {user.Login}");
+
+                    }
+                }
+            }
         }
     }
 }

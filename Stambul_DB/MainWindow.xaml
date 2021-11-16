@@ -13,9 +13,9 @@
                 <ImageBrush ImageSource="file:///C:/Users/пк/source/repos/Stambul_DB/Stambul_DB/Res/Icons/User.png"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="541,360,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
-        <Button Content="Sign-in" HorizontalAlignment="Left" Margin="618,431,0,0" VerticalAlignment="Top" Width="178" Height="40" Background="#FFF9F9F9">
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" Margin="545,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <Button x:Name="Sign_in" Content="Sign-in" HorizontalAlignment="Left" Margin="618,431,0,0" VerticalAlignment="Top" Width="178" Height="40" Background="#FFF9F9F9" Click="SignIn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -32,6 +32,8 @@
         </Button>
         <TextBlock x:Name="Authorization" HorizontalAlignment="Left" Margin="618,112,0,0" TextWrapping="Wrap" Text="Authorization" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="212" FontSize="30"/>
         <TextBlock x:Name="ISTANBULDB" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
+        <TextBlock x:Name="Login1" HorizontalAlignment="Left" Margin="545,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF88119B" Height="20" Width="212" FontSize="16"><Run Text="Login"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Password1" HorizontalAlignment="Left" Margin="545,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF88119B" Height="25" Width="212" FontSize="16"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>

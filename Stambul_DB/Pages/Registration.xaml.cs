@@ -29,7 +29,31 @@ namespace Stambul_DB.Pages
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
+            if (UserName.Text == "" || Email.Text == "")
+            {
+                MessageBox.Show("Введите ваши данные");
+            }
+            else
+            {
+                User user = new User();
 
+                user.Login = Login.Text;
+                user.Password = Password.Text;
+                user.Email = Email.Text;
+                user.User_Name = UserName.Text;
+                user.Id_Role = 2;
+                MainWindow.dbEntities.User.Add(user);
+                MainWindow.dbEntities.SaveChanges();
+                MessageBox.Show("Успешно!");
+
+            }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow window = new NavigationWindow();
+            window.Source = new Uri("/MainWindow.xaml", UriKind.Relative);
+            window.Show();
         }
     }
 }

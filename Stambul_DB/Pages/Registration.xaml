@@ -15,8 +15,8 @@
                 <ImageBrush ImageSource="file:///C:/Users/пк/source/repos/Stambul_DB/Stambul_DB/Res/Icons/User.png"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="45" Margin="545,360,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="45" Margin="545,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
         <Button x:Name="SignUp" Content="Sign-up" HorizontalAlignment="Left" Margin="572,572,0,0"  VerticalAlignment="Top" Width="263" Height="40" Background="#FF88119B" Click="SignUp_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -26,7 +26,18 @@
         </Button>
         <TextBlock x:Name="Ragistration" HorizontalAlignment="Left" Margin="602,104,0,0" TextWrapping="Wrap" Text="Registartion" VerticalAlignment="Top" Foreground="#FF88119B" Height="70" Width="212" FontSize="36"/>
         <TextBlock x:Name="ISTANBULDB" HorizontalAlignment="Left" Margin="589,0,0,0" TextWrapping="Wrap" Text="ISTANBUL DB" VerticalAlignment="Top" Foreground="#FF88119B" Height="69" Width="276" FontSize="36"/>
-        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,428,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="545,500,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="45" Margin="545,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
+        <TextBlock x:Name="UserName1" HorizontalAlignment="Left" Margin="545,267,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" Foreground="#FF88119B" Height="25" Width="212" FontSize="16"/>
+        <TextBlock x:Name="Email1" HorizontalAlignment="Left" Margin="545,337,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Foreground="#FF88119B" Height="25" Width="212" FontSize="16"/>
+        <TextBlock x:Name="Login1" HorizontalAlignment="Left" Margin="545,403,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Foreground="#FF88119B" Height="25" Width="212" FontSize="16"/>
+        <TextBlock x:Name="Password1" HorizontalAlignment="Left" Margin="545,473,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="#FF88119B" Height="25" Width="212" FontSize="16"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="620,634,0,0"  VerticalAlignment="Top" Width="161" Height="40" Background="#FFA00910" Click="Back_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>

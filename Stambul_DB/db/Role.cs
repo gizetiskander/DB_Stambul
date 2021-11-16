@@ -12,15 +12,18 @@ namespace Stambul_DB.db
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Role
     {
-        public int Id_User { get; set; }
-        public string User_Name { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public Nullable<int> Id_Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Role()
+        {
+            this.User = new HashSet<User>();
+        }
     
-        public virtual Role Role { get; set; }
+        public int Id_Role { get; set; }
+        public string Role_Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> User { get; set; }
     }
 }

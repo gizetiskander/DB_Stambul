@@ -34,6 +34,7 @@ namespace Stambul_DB.db
         public virtual DbSet<Pervetitich_Maps> Pervetitich_Maps { get; set; }
         public virtual DbSet<Photos> Photos { get; set; }
         public virtual DbSet<Regional_Maps> Regional_Maps { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Satellite_Maps> Satellite_Maps { get; set; }
         public virtual DbSet<Spaces_of_Everyday_Life> Spaces_of_Everyday_Life { get; set; }
         public virtual DbSet<Special_Maps> Special_Maps { get; set; }
