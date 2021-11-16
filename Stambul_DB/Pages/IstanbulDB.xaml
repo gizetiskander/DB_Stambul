@@ -5,10 +5,72 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Stambul_DB.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1440" d:DesignWidth="1024" Background="Black"
+      d:DesignHeight="1024" d:DesignWidth="1440" Background="Black"
       Title="IstanbulDB">
 
     <Grid>
-        
+        <ScrollViewer>
+            <StackPanel HorizontalAlignment="Left" Height="1014" Margin="10,10,0,0" VerticalAlignment="Top" Width="307">
+            <Expander x:Name="CityMaps" Header="City Maps" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1815 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1821 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1853 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1860 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1882 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1913 City Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1918 City Maps</CheckBox>
+                    </StackPanel>
+                </Expander>
+                <Expander x:Name="RegionalMaps" Header="Regional Maps" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1899 Regional Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1900 Regional Maps</CheckBox>
+                    </StackPanel>
+                </Expander>
+                <Expander x:Name="SpecialMaps" Header="Special Maps" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1865 Fire Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1875 Cholera Outbreak Interactive Maps</CheckBox>
+                    </StackPanel>
+                </Expander>
+                <Expander x:Name="PervetitichMaps" Header="Pervetitich Maps" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
+                    </StackPanel>
+                </Expander>
+                <Expander x:Name="SatelliteMaps" Header="Satellite Maps" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1946 Satellite Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
+                    </StackPanel>
+                </Expander>
+                    <Expander x:Name="MajorRoads" Header="Major Roads" Foreground="#FFF0E7E7" FontSize="18">
+                        <StackPanel>
+                            <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
+                            <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
+                            <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
+                            <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
+                            <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
+                    </StackPanel>
+                    </Expander>
+                <Expander x:Name="SpacesofEverydayLife" Header="Spaces of Everyday Life" Foreground="#FFF0E7E7" FontSize="18">
+                    <StackPanel>
+                        <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
+                        <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
