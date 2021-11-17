@@ -1,4 +1,4 @@
-﻿<Page x:Class="Stambul_DB.Pages.IstanbulDB"
+﻿<Window x:Class="Stambul_DB.Pages.IstanbulDB"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,68 +9,93 @@
       Title="IstanbulDB">
 
     <Grid>
-        <ScrollViewer>
-            <StackPanel HorizontalAlignment="Left" Height="1014" Margin="10,10,0,0" VerticalAlignment="Top" Width="307">
+        <StackPanel HorizontalAlignment="Left" Height="1014" Margin="10,10,0,0" VerticalAlignment="Top" Width="307">
             <Expander x:Name="CityMaps" Header="City Maps" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1815 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1821 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1853 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1860 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1882 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1913 City Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1918 City Maps</CheckBox>
-                    </StackPanel>
-                </Expander>
-                <Expander x:Name="RegionalMaps" Header="Regional Maps" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1899 Regional Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1900 Regional Maps</CheckBox>
-                    </StackPanel>
-                </Expander>
-                <Expander x:Name="SpecialMaps" Header="Special Maps" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1865 Fire Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1875 Cholera Outbreak Interactive Maps</CheckBox>
-                    </StackPanel>
-                </Expander>
-                <Expander x:Name="PervetitichMaps" Header="Pervetitich Maps" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
-                    </StackPanel>
-                </Expander>
-                <Expander x:Name="SatelliteMaps" Header="Satellite Maps" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1946 Satellite Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
-                    </StackPanel>
-                </Expander>
-                    <Expander x:Name="MajorRoads" Header="Major Roads" Foreground="#FFF0E7E7" FontSize="18">
-                        <StackPanel>
-                            <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
-                            <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
-                            <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
-                            <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
-                            <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
-                    </StackPanel>
-                    </Expander>
-                <Expander x:Name="SpacesofEverydayLife" Header="Spaces of Everyday Life" Foreground="#FFF0E7E7" FontSize="18">
-                    <StackPanel>
-                        <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
-                        <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
-                    </StackPanel>
-                </Expander>
-            </StackPanel>
-        </ScrollViewer>
+                <StackPanel>
+                    <CheckBox x:Name="_1815_CM1" Foreground="#FFF7F2F2" Checked="_1815_CM1_IsChecked" Unchecked="_1815_CM1_Unchecked">1815 City Maps</CheckBox>
+                    <CheckBox x:Name="_1821_CM1" Foreground="#FFF7F2F2" Checked="_1821_CM1_Cheked" Unchecked="_1821_CM1_Unchecked">1821 City Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1853 City Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1860 City Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1882 City Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1913 City Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1918 City Maps</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="RegionalMaps" Header="Regional Maps" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1899 Regional Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1900 Regional Maps</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="SpecialMaps" Header="Special Maps" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1875 Fire Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1865 Cholera Outbreak Interactive Maps</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="PervetitichMaps" Header="Pervetitich Maps" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="SatelliteMaps" Header="Satellite Maps" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1946 Satellite Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="MajorRoads" Header="Major Roads" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="SpacesofEverydayLife" Header="Spaces of Everyday Life" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">Beaches</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">Casinos</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">Spaces of Beyoglu</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="Transportation" Header="Transportation" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1922 Ferry Map</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1922 Train Map</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1922 Tramway Map</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="Photos" Header="Photos" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">All Photos</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="MasterPlans" Header="Master Plans" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">Prost Transportation Study</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">Prost Master Plan Model</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander x:Name="CityGrowth" Header="City Growth" Foreground="#FFF0E7E7" FontSize="18">
+                <StackPanel>
+                    <CheckBox Foreground="#FFF7F2F2">1920-1994 Diagram</CheckBox>
+                    <CheckBox Foreground="#FFF7F2F2">1930 Municipal Border</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Button x:Name="Add" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Initialized="Add_initialaized"/>
+            <Button x:Name="Delete" Content="Удалить" Margin="0,0,191,0" Height="39" Background="#FFE41124" Visibility="Hidden" Initialized="Delete_initialaized"/>
+        </StackPanel>
+
+        <Image x:Name="_1815_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1815_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
+        <Image x:Name="_1821_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1821_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden" />
     </Grid>
-</Page>
+</Window>

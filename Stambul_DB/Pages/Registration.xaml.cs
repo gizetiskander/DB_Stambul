@@ -16,11 +16,14 @@ using Stambul_DB.db;
 using Stambul_DB.Pages;
 
 namespace Stambul_DB.Pages
+
+
 {
     /// <summary>
     /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class Registration : Page
+    
+    public partial class Registration : Window
     {
         public Registration()
         {
@@ -51,9 +54,9 @@ namespace Stambul_DB.Pages
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("/MainWindow.xaml", UriKind.Relative);
-            window.Show();
+            MainWindow main = new MainWindow();
+            this.Close();
+            main.Show();
         }
     }
 }
