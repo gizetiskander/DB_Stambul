@@ -89,8 +89,8 @@ namespace Stambul_DB.Pages
         }
 
        
-    }
-}
+    
+
 
         private void Add_CM_Click(object sender, RoutedEventArgs e)
         {
