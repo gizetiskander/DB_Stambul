@@ -60,26 +60,93 @@ namespace Stambul_DB.Pages
         {
                 if (MainWindow.authUser.Id_Role == 1)
                 {
-                    Add.Visibility = Visibility.Visible;
+                    Add_CM.Visibility = Visibility.Visible;
+                    Add_RM.Visibility = Visibility.Visible;
+                    Add_SM.Visibility = Visibility.Visible;
+                    Add_MR.Visibility = Visibility.Visible;
+                    Add_PM.Visibility = Visibility.Visible;
+                    Add_SEL.Visibility = Visibility.Visible;
+                    Add_T.Visibility = Visibility.Visible;
+                    Add_MP.Visibility = Visibility.Visible;
+                    Add_SAM.Visibility = Visibility.Visible;
+                    Add_P.Visibility = Visibility.Visible;
+                    Add_CG.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    Add.Visibility = Visibility.Hidden;
+                    Add_CM.Visibility = Visibility.Hidden;
+                    Add_RM.Visibility = Visibility.Hidden;
+                    Add_SM.Visibility = Visibility.Hidden;
+                    Add_MR.Visibility = Visibility.Hidden;
+                    Add_PM.Visibility = Visibility.Hidden;
+                    Add_SEL.Visibility = Visibility.Hidden;
+                    Add_T.Visibility = Visibility.Hidden;
+                    Add_MP.Visibility = Visibility.Hidden;
+                    Add_SAM.Visibility = Visibility.Hidden;
+                    Add_P.Visibility = Visibility.Hidden;
+                    Add_CG.Visibility = Visibility.Hidden;
                 }
         }
 
-        private void Delete_initialaized(object sender, EventArgs e)
+       
+    }
+}
+
+        private void Add_CM_Click(object sender, RoutedEventArgs e)
         {
-                if (MainWindow.authUser.Id_Role == 1)
-                {
-                    Delete.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    Delete.Visibility = Visibility.Hidden;
-                }
+
         }
 
+      
+
+        private void Add_RM_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+     
+        private void Add_PM_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
+
+        private void Add_MR_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
+
+        private void Add_SEL_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+    
+
+        private void Add_T_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+    
+
+        private void Add_SAM_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_CG_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_P_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         private void _1821_CM1_IsCheked(object sender, RoutedEventArgs e)
         {
             _1821_CM.Visibility = Visibility.Visible;
