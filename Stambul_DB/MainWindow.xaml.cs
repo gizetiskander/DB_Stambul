@@ -49,13 +49,13 @@ namespace Stambul_DB
                 {
                     if (user.Password == Password.Text.Trim() && user.Id_Role == 2)
                     {
-                        MessageBox.Show($"Привет Пользователь {user.Login}");
+                        MessageBox.Show($"Привет, Пользователь: {user.Login}");
                         MainWindow.authUser = user;
-                        MessageBox.Show($"{MainWindow.authUser}");
                     }
                     if (user.Password == Password.Text.Trim() && user.Id_Role == 1)
                     {
-                        MessageBox.Show($"Привет админ {user.Login}");
+                        MessageBox.Show($"Привет, админ: {user.Login}");
+                        MainWindow.authUser = user;
                     }
                     IstanbulDB istanbulDB = new IstanbulDB();
                     this.Close();

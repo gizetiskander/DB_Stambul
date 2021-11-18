@@ -32,44 +32,260 @@ namespace Stambul_DB.Pages
         private void _1815_CM1_IsChecked(object sender, RoutedEventArgs e)
         {
             _1815_CM.Visibility = Visibility.Visible;
+            if (_1815_CM1.IsChecked == true)
+            {
+                _1821_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
             
         }
 
         private void _1815_CM1_Unchecked(object sender, RoutedEventArgs e)
         {
             _1815_CM.Visibility = Visibility.Hidden;
+            _1821_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+
         }
 
         private void Add_initialaized(object sender, EventArgs e)
         {
-            foreach (var user in MainWindow.dbEntities.User)
-            {
-                if (user.Id_Role == 1)
+                if (MainWindow.authUser.Id_Role == 1)
                 {
                     Add.Visibility = Visibility.Visible;
                 }
-            }
+                else
+                {
+                    Add.Visibility = Visibility.Hidden;
+                }
         }
 
         private void Delete_initialaized(object sender, EventArgs e)
         {
-            foreach (var user in MainWindow.dbEntities.User)
-            {
-                if (user.Id_Role == 1)
+                if (MainWindow.authUser.Id_Role == 1)
                 {
                     Delete.Visibility = Visibility.Visible;
                 }
-            }
+                else
+                {
+                    Delete.Visibility = Visibility.Hidden;
+                }
         }
 
-        private void _1821_CM1_Cheked(object sender, RoutedEventArgs e)
+        private void _1821_CM1_IsCheked(object sender, RoutedEventArgs e)
         {
             _1821_CM.Visibility = Visibility.Visible;
+            if (_1821_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
         }
 
         private void _1821_CM1_Unchecked(object sender, RoutedEventArgs e)
         {
             _1821_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1853_CM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1853_CM.Visibility = Visibility.Visible;
+            if (_1853_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1821_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1853_CM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1853_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1821_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1860_CM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1860_CM.Visibility = Visibility.Visible;
+            if (_1860_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1821_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1860_CM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1860_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1821_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1882_CM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1882_CM.Visibility = Visibility.Visible;
+            if (_1882_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1821_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1882_CM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1882_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1821_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1913_CM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1913_CM.Visibility = Visibility.Visible;
+            if (_1913_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1821_CM1.Visibility = Visibility.Hidden;
+                _1918_CM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1913_CM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1913_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1821_CM1.Visibility = Visibility.Visible;
+            _1918_CM1.Visibility = Visibility.Visible;
+
+        }
+
+        private void _1918_CM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1918_CM.Visibility = Visibility.Visible;
+            if (_1918_CM1.IsChecked == true)
+            {
+                _1815_CM1.Visibility = Visibility.Hidden;
+                _1853_CM1.Visibility = Visibility.Hidden;
+                _1860_CM1.Visibility = Visibility.Hidden;
+                _1882_CM1.Visibility = Visibility.Hidden;
+                _1913_CM1.Visibility = Visibility.Hidden;
+                _1821_CM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1918_CM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1918_CM.Visibility = Visibility.Hidden;
+            _1815_CM1.Visibility = Visibility.Visible;
+            _1853_CM1.Visibility = Visibility.Visible;
+            _1860_CM1.Visibility = Visibility.Visible;
+            _1882_CM1.Visibility = Visibility.Visible;
+            _1913_CM1.Visibility = Visibility.Visible;
+            _1821_CM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1899_RM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1899_RM.Visibility = Visibility.Visible;
+            if(_1899_RM1.IsChecked == true)
+            {
+                _1900_RM1.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void _1899_RM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1899_RM.Visibility = Visibility.Hidden;
+            _1900_RM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1900_RM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1900_RM.Visibility = Visibility.Visible;
+            if (_1900_RM1.IsChecked == true)
+            {
+                _1899_RM1.Visibility = Visibility.Hidden;
+            }
+        }
+        private void _1900_RM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1900_RM.Visibility = Visibility.Hidden;
+            _1899_RM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1875_SM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1875_SM.Visibility = Visibility.Visible;
+            if (_1875_SM1.IsChecked == true)
+            {
+                _1865_SM1.Visibility = Visibility.Hidden;
+            }
+        }
+        private void _1875_SM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1875_SM.Visibility = Visibility.Hidden;
+            _1865_SM1.Visibility = Visibility.Visible;
+        }
+
+        private void _1865_SM1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1865_SM.Visibility = Visibility.Visible;
+            if (_1865_SM1.IsChecked == true)
+            {
+                _1875_SM1.Visibility = Visibility.Hidden;
+            }
+        }
+        private void _1865_SM1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1865_SM.Visibility = Visibility.Hidden;
+            _1875_SM1.Visibility = Visibility.Visible;
         }
     }
 }
