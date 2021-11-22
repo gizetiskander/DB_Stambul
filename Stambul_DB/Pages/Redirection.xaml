@@ -16,15 +16,15 @@
 
         </StackPanel>
         <StackPanel Margin="159,10,184,43">
-            <Button x:Name="Redirection_MP" Content="Transoprtation" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_SAM" Content="Satellite Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_MR" Content="Major Roads" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_SEL" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_T" Content="Transportation" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_T_Click"/>
+            <Button x:Name="Redirection_SAM" Content="Satellite Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_SAM_Click"/>
+            <Button x:Name="Redirection_MR" Content="Major Roads" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_MR_Click"/>
+            <Button x:Name="Redirection_SEL" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_SEL_Click"/>
 
         </StackPanel>
         <StackPanel Margin="295,10,10,53">
-            <Button x:Name="Redirection_P" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="127" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_CG" Content="Transoprtation" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_MP" Content="Master Plan" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_MP_Click"/>
+            <Button x:Name="Redirection_CG" Content="City Growth" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_CG_Click"/>
         </StackPanel>
 
     </Grid>

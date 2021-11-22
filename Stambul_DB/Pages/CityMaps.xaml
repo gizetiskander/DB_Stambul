@@ -5,10 +5,32 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Stambul_DB.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1024" d:DesignWidth="1440"
       Title="CityMaps">
 
-    <Grid>
-        
-    </Grid>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button x:Name="Add" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="ButtonAdd" Content="Save"/>
+            <Button x:Name="Delete" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="10" Click="ButtonDel" Content="Delete"/>
+            <Button x:Name="Back" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="1100,15" Content="Back" Click="Back_Click" />
+        </StackPanel>
+
+            <StackPanel>
+                <DataGrid AutoGenerateColumns="False" ColumnWidth="*" x:Name="City_Maps">
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Binding="{Binding id_City_Maps}" Width="100" Header="Id_City_Maps"/>
+                        <DataGridTextColumn Binding="{Binding Year_CM}"  Width="200" Header="Year_CM"/>
+                        <DataGridTextColumn Binding="{Binding Image_Cm}"  Width="100" Header="Image_CM"/>
+                    <DataGridTextColumn Binding="{Binding Id_User}"  Width="100" Header="Id_User"/>
+                </DataGrid.Columns>
+
+                </DataGrid>
+            </StackPanel>
+
+        </Grid>
 </Window>

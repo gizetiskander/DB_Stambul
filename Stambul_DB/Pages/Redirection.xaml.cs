@@ -51,5 +51,47 @@ namespace Stambul_DB.Pages
             this.Close();
             pm.Show();
         }
+
+        private void Redirection_T_Click(object sender, RoutedEventArgs e)
+        {
+            Transportation t = new Transportation();
+            this.Close();
+            t.Show();
+        }
+
+        private void Redirection_SAM_Click(object sender, RoutedEventArgs e)
+        {
+            SatelitteMaps sam = new SatelitteMaps();
+            this.Close();
+            sam.Show();
+        }
+
+        private void Redirection_MR_Click(object sender, RoutedEventArgs e)
+        {
+            MajorRoads mr = new MajorRoads();
+            this.Close();
+            mr.Show();
+        }
+
+        private void Redirection_SEL_Click(object sender, RoutedEventArgs e)
+        {
+            SpacesOfEverydayLife sel = new SpacesOfEverydayLife();
+            this.Close();
+            sel.Show();
+        }
+
+        private void Redirection_MP_Click(object sender, RoutedEventArgs e)
+        {
+            MasterPlan mp = new MasterPlan();
+            this.Close();
+            mp.Show();
+        }
+
+        private void Redirection_CG_Click(object sender, RoutedEventArgs e)
+        {
+            CityGrowth cg = new CityGrowth();
+            this.Close();
+            cg.Show();
+        }
     }
 }

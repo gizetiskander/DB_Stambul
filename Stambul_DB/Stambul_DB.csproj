@@ -128,11 +128,20 @@
     <Compile Include="db\User.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CityGrowth.xaml.cs">
+      <DependentUpon>CityGrowth.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CityMaps.xaml.cs">
       <DependentUpon>CityMaps.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\IstanbulDB.xaml.cs">
       <DependentUpon>IstanbulDB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MajorRoads.xaml.cs">
+      <DependentUpon>MajorRoads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MasterPlan.xaml.cs">
+      <DependentUpon>MasterPlan.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PervetitichMaps.xaml.cs">
       <DependentUpon>PervetitichMaps.xaml</DependentUpon>
@@ -158,11 +167,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\CityGrowth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CityMaps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\IstanbulDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MajorRoads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MasterPlan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,14 +203,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\SatelitteMaps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SpacesOfEverydayLife.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SpecialMaps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Transportation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\SatelitteMaps.xaml.cs">
+      <DependentUpon>SatelitteMaps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpacesOfEverydayLife.xaml.cs">
+      <DependentUpon>SpacesOfEverydayLife.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SpecialMaps.xaml.cs">
       <DependentUpon>SpecialMaps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transportation.xaml.cs">
+      <DependentUpon>Transportation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
