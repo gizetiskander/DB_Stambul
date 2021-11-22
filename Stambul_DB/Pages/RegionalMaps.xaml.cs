@@ -18,7 +18,7 @@ namespace Stambul_DB.Pages
     /// <summary>
     /// Логика взаимодействия для RegionalMaps.xaml
     /// </summary>
-    public partial class RegionalMaps : Page
+    public partial class RegionalMaps : Window
     {
         public RegionalMaps()
         {

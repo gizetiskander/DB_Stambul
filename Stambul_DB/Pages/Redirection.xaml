@@ -8,10 +8,10 @@
         Title="Redirection" Height="200" Width="440" Background="Black">
     <Grid>
         <StackPanel Height="100" Margin="10,10,329,59">
-            <Button x:Name="Redirection_CM" Content="City Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="22"/>
-            <Button x:Name="Redirection_RM" Content="Regional Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_SM" Content="Special Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_PM" Content="Pervetitich Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_CM" Content="City Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="22" Click="Redirection_CM_Click"/>
+            <Button x:Name="Redirection_RM" Content="Regional Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_RM_Click"/>
+            <Button x:Name="Redirection_SM" Content="Special Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_SM_Click"/>
+            <Button x:Name="Redirection_PM" Content="Pervetitich Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25" Click="Redirection_PM_Click"/>
 
 
         </StackPanel>

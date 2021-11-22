@@ -18,7 +18,7 @@ namespace Stambul_DB.Pages
     /// <summary>
     /// Логика взаимодействия для CityMaps.xaml
     /// </summary>
-    public partial class CityMaps : Page
+    public partial class CityMaps : Window
     {
         public CityMaps()
         {

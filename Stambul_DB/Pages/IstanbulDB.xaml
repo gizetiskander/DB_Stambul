@@ -86,14 +86,8 @@
                     <CheckBox x:Name="_1922_TF1" Checked="_1922_TF1_IsCheked" Unchecked="_1922_TF1_Unchecked" Foreground="#FFF7F2F2">1922 Ferry Map</CheckBox>
                     <CheckBox x:Name="_1922_TT1" Checked="_1922_TT1_IsCheked" Unchecked="_1922_TT1_Unchecked" Foreground="#FFF7F2F2">1922 Train Map</CheckBox>
                     <CheckBox x:Name="_1922_TWT1" Checked="_1922_TWT1_IsCheked" Unchecked="_1922_TWT1_Unchecked" Foreground="#FFF7F2F2">1922 Tramway Map</CheckBox>
-                  
-                    
-                </StackPanel>
-            </Expander>
-            <Expander x:Name="Photos" Header="Photos" Foreground="#FFF0E7E7" FontSize="18">
-                <StackPanel>
-                    <CheckBox x:Name="P1" Checked="P1_IsCheked" Unchecked="P1_Unchecked" Foreground="#FFF7F2F2">All Photos</CheckBox>
-                  
+
+
                 </StackPanel>
             </Expander>
             <Expander x:Name="MasterPlans" Header="Master Plans" Foreground="#FFF0E7E7" FontSize="18">
@@ -138,6 +132,7 @@
         <Image x:Name="_1922_MR" Source="1922_MR.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="_1946_MR" Source="1946_MR.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="_1966_MR" Source="1966_MR.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1970_MR" Source="1966_MR.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="_1982_MR" Source="1982_MR.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="Beaches" Source="Beaches.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="Casinos" Source="Casinos.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>

@@ -18,7 +18,7 @@ namespace Stambul_DB.Pages
     /// <summary>
     /// Логика взаимодействия для SpecialMaps.xaml
     /// </summary>
-    public partial class SpecialMaps : Page
+    public partial class SpecialMaps : Window
     {
         public SpecialMaps()
         {

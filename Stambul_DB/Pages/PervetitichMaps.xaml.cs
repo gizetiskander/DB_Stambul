@@ -18,7 +18,7 @@ namespace Stambul_DB.Pages
     /// <summary>
     /// Логика взаимодействия для PervetitichMaps.xaml
     /// </summary>
-    public partial class PervetitichMaps : Page
+    public partial class PervetitichMaps : Window
     {
         public PervetitichMaps()
         {

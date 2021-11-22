@@ -23,5 +23,33 @@ namespace Stambul_DB.Pages
         {
             InitializeComponent();
         }
+
+        private void Redirection_CM_Click(object sender, RoutedEventArgs e)
+        {
+            CityMaps cm = new CityMaps();
+            this.Close();
+            cm.Show();
+        }
+
+        private void Redirection_RM_Click(object sender, RoutedEventArgs e)
+        {
+            RegionalMaps rm = new RegionalMaps();
+            this.Close();
+            rm.Show();
+        }
+
+        private void Redirection_SM_Click(object sender, RoutedEventArgs e)
+        {
+            SpecialMaps sm = new SpecialMaps();
+            this.Close();
+            sm.Show();
+        }
+
+        private void Redirection_PM_Click(object sender, RoutedEventArgs e)
+        {
+            PervetitichMaps pm = new PervetitichMaps();
+            this.Close();
+            pm.Show();
+        }
     }
 }
