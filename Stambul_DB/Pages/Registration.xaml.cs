@@ -46,9 +46,18 @@ namespace Stambul_DB.Pages
                 user.User_Name = UserName.Text;
                 user.Id_Role = 2;
                 MainWindow.dbEntities.User.Add(user);
-                MainWindow.dbEntities.SaveChanges();
-                MessageBox.Show("Успешно!");
-
+                try
+                {
+                    MainWindow.dbEntities.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Такой логин уже существует");
+                }
+                finally
+                {
+                    MessageBox.Show("Успешно!");
+                }
             }
         }
 

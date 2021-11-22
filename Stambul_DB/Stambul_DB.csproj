@@ -131,6 +131,9 @@
     <Compile Include="Pages\IstanbulDB.xaml.cs">
       <DependentUpon>IstanbulDB.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Redirection.xaml.cs">
+      <DependentUpon>Redirection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\IstanbulDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Redirection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

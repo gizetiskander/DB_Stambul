@@ -19,7 +19,7 @@
                     <CheckBox x:Name="_1882_CM1" Foreground="#FFF7F2F2" Checked="_1882_CM1_IsCheked" Unchecked="_1882_CM1_Unchecked">1882 City Maps</CheckBox>
                     <CheckBox x:Name="_1913_CM1" Foreground="#FFF7F2F2" Checked="_1913_CM1_IsCheked" Unchecked="_1913_CM1_Unchecked">1913 City Maps</CheckBox>
                     <CheckBox x:Name="_1918_CM1" Foreground="#FFF7F2F2" Checked="_1918_CM1_IsCheked" Unchecked="_1918_CM1_Unchecked">1918 City Maps</CheckBox>
-                    <Button x:Name="Add_CM" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_CM_Click" Initialized="Add_initialaized"/>
+                  
                 
                 </StackPanel>
             </Expander>
@@ -27,7 +27,7 @@
                 <StackPanel>
                     <CheckBox x:Name="_1899_RM1" Checked="_1899_RM1_IsCheked" Unchecked="_1899_RM1_Unchecked" Foreground="#FFF7F2F2">1899 Regional Maps</CheckBox>
                     <CheckBox x:Name="_1900_RM1" Checked="_1900_RM1_IsCheked" Unchecked="_1900_RM1_Unchecked" Foreground="#FFF7F2F2">1900 Regional Maps</CheckBox>
-                    <Button x:Name="Add_RM" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_RM_Click" Initialized="Add_initialaized"/>
+                   
 
                 </StackPanel>
             </Expander>
@@ -35,19 +35,19 @@
                 <StackPanel>
                     <CheckBox x:Name="_1875_SM1" Checked="_1875_SM1_IsCheked" Unchecked="_1875_SM1_Unchecked" Foreground="#FFF7F2F2">1875 Fire Maps</CheckBox>
                     <CheckBox x:Name="_1865_SM1" Checked="_1865_SM1_IsCheked" Unchecked="_1865_SM1_Unchecked" Foreground="#FFF7F2F2">1865 Cholera Outbreak Interactive Maps</CheckBox>
-                    <Button x:Name="Add_SM" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_SM_Click" Initialized="Add_initialaized"/>
+                    
                     
                 </StackPanel>
             </Expander>
             <Expander x:Name="PervetitichMaps" Header="Pervetitich Maps" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
+                    <CheckBox  x:Name="_1923_B1" Checked="_1923_B1_IsCheked" Unchecked="_1923_B1_Unchecked" Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
-                    <Button x:Name="Add_PM" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_PM_Click" Initialized="Add_initialaized"/>
+                 
                     
                 </StackPanel>
             </Expander>
@@ -57,7 +57,7 @@
                     <CheckBox Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
-                    <Button x:Name="Add_SAM" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_SAM_Click" Initialized="Add_initialaized"/>
+                    
  
                 </StackPanel>
             </Expander>
@@ -68,7 +68,7 @@
                     <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
-                    <Button x:Name="Add_MR" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_MR_Click" Initialized="Add_initialaized"/>
+                   
                    
                 </StackPanel>
             </Expander>
@@ -77,7 +77,7 @@
                     <CheckBox Foreground="#FFF7F2F2">Beaches</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">Casinos</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">Spaces of Beyoglu</CheckBox>
-                    <Button x:Name="Add_SEL" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_SEL_Click" Initialized="Add_initialaized"/>
+                   
                    
                 </StackPanel>
             </Expander>
@@ -86,22 +86,21 @@
                     <CheckBox Foreground="#FFF7F2F2">1922 Ferry Map</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1922 Train Map</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1922 Tramway Map</CheckBox>
-                    <Button x:Name="Add_T" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_T_Click" Initialized="Add_initialaized"/>
+                  
                     
                 </StackPanel>
             </Expander>
             <Expander x:Name="Photos" Header="Photos" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
                     <CheckBox Foreground="#FFF7F2F2">All Photos</CheckBox>
-                    <Button x:Name="Add_P" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_P_Click" Initialized="Add_initialaized"/>
-                    
+                  
                 </StackPanel>
             </Expander>
             <Expander x:Name="MasterPlans" Header="Master Plans" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
                     <CheckBox Foreground="#FFF7F2F2">Prost Transportation Study</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">Prost Master Plan Model</CheckBox>
-                    <Button x:Name="Add_MP" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_MP_Click" Initialized="Add_initialaized"/>
+                
                     
                 </StackPanel>
             </Expander>
@@ -109,10 +108,11 @@
                 <StackPanel>
                     <CheckBox Foreground="#FFF7F2F2">1920-1994 Diagram</CheckBox>
                     <CheckBox Foreground="#FFF7F2F2">1930 Municipal Border</CheckBox>
-                    <Button x:Name="Add_CG" Content="Добавить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Visibility="Hidden" Click="Add_CG_Click" Initialized="Add_initialaized"/>
+                   
                     
                 </StackPanel>
             </Expander>
+            <Button x:Name="Add_CM" Content="Изменить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Click="Add_CM_Click" Initialized="Add_initialaized"/>
         </StackPanel>
         <Image x:Name="_1815_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1815_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
             <Image x:Name="_1821_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1821_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
@@ -125,5 +125,11 @@
         <Image x:Name="_1900_RM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1900_RM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="_1875_SM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1875_SM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
         <Image x:Name="_1865_SM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1865_SM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1923_B" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1923_B.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1924_N" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1924_N.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1927_O" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1927_O.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1939_K" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1939_K.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1941_E" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1941_E.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1944_T" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1944_T.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
     </Grid>
 </Window>
