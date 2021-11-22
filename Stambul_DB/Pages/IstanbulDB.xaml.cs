@@ -284,16 +284,46 @@ namespace Stambul_DB.Pages
         }
         private void _1923_B1_IsCheked(object sender, RoutedEventArgs e)
         {
-            _1865_SM.Visibility = Visibility.Visible;
-            if (_1865_SM1.IsChecked == true)
+            _1923_B.Visibility = Visibility.Visible;
+            if (_1923_B1.IsChecked == true)
             {
-                _1875_SM1.Visibility = Visibility.Hidden;
+                _1924_N1.Visibility = Visibility.Hidden;
+                _1927_O1.Visibility = Visibility.Hidden;
+                _1939_K1.Visibility = Visibility.Hidden;
+                _1941_E1.Visibility = Visibility.Hidden;
+                _1944_T1.Visibility = Visibility.Hidden;
             }
         }
         private void _1923_B1_Unchecked(object sender, RoutedEventArgs e)
         {
-            _1865_SM.Visibility = Visibility.Hidden;
-            _1875_SM1.Visibility = Visibility.Visible;
+            _1923_B.Visibility = Visibility.Hidden;
+            _1924_N1.Visibility = Visibility.Visible;
+            _1927_O1.Visibility = Visibility.Visible;
+            _1939_K1.Visibility = Visibility.Visible;
+            _1941_E1.Visibility = Visibility.Visible;
+            _1944_T1.Visibility = Visibility.Visible;
+        }
+
+        private void _1924_N1_IsCheked(object sender, RoutedEventArgs e)
+        {
+            _1924_N.Visibility = Visibility.Visible;
+            if (_1924_N1.IsChecked == true)
+            {
+                _1923_B1.Visibility = Visibility.Hidden;
+                _1927_O1.Visibility = Visibility.Hidden;
+                _1939_K1.Visibility = Visibility.Hidden;
+                _1941_E1.Visibility = Visibility.Hidden;
+                _1944_T1.Visibility = Visibility.Hidden;
+            }
+        }
+        private void _1924_N1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _1924_N.Visibility = Visibility.Hidden;
+            _1924_N1.Visibility = Visibility.Visible;
+            _1927_O1.Visibility = Visibility.Visible;
+            _1939_K1.Visibility = Visibility.Visible;
+            _1941_E1.Visibility = Visibility.Visible;
+            _1944_T1.Visibility = Visibility.Visible;
         }
 
 

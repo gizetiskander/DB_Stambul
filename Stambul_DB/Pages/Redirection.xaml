@@ -7,22 +7,25 @@
         mc:Ignorable="d"
         Title="Redirection" Height="200" Width="440" Background="Black">
     <Grid>
-        <StackPanel Height="100" Margin="10,10,10,59">
+        <StackPanel Height="100" Margin="10,10,329,59">
             <Button x:Name="Redirection_CM" Content="City Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="22"/>
             <Button x:Name="Redirection_RM" Content="Regional Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
             <Button x:Name="Redirection_SM" Content="Special Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
             <Button x:Name="Redirection_PM" Content="Pervetitich Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_MP" Content="Transoprtation" HorizontalAlignment="Left" Margin="173,-99,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_SAM" Content="Satellite Maps" HorizontalAlignment="Left" Margin="87,-99,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_MR" Content="Major Roads" HorizontalAlignment="Left" Margin="87,-74,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_SEL" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="87,-50,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_T" Content="Transoprtation" HorizontalAlignment="Left" Margin="87,-25,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
 
-            <Button x:Name="Redirection_P" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="173,-75,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
-            <Button x:Name="Redirection_CG" Content="Transoprtation" HorizontalAlignment="Left" Margin="173,-50,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
 
         </StackPanel>
+        <StackPanel Margin="159,10,184,43">
+            <Button x:Name="Redirection_MP" Content="Transoprtation" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_SAM" Content="Satellite Maps" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_MR" Content="Major Roads" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_SEL" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
 
+        </StackPanel>
+        <StackPanel Margin="295,10,10,53">
+            <Button x:Name="Redirection_P" Content="Spaces of Everyday Life" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="127" Background="White" Foreground="Black" Height="25"/>
+            <Button x:Name="Redirection_CG" Content="Transoprtation" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="87" Background="White" Foreground="Black" Height="25"/>
+        </StackPanel>
 
     </Grid>
 </Window>

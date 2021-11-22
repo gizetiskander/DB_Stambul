@@ -42,94 +42,112 @@
             <Expander x:Name="PervetitichMaps" Header="Pervetitich Maps" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
                     <CheckBox  x:Name="_1923_B1" Checked="_1923_B1_IsCheked" Unchecked="_1923_B1_Unchecked" Foreground="#FFF7F2F2">1923 Beyazid</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
+                    <CheckBox  x:Name="_1924_N1" Checked="_1924_N1_IsCheked" Unchecked="_1924_N1_Unchecked" Foreground="#FFF7F2F2">1924 Nisantasi</CheckBox>
+                    <CheckBox  x:Name="_1927_O1" Checked="_1927_O1_IsCheked" Unchecked="_1927_O1_Unchecked" Foreground="#FFF7F2F2">1927 Ortakoy</CheckBox>
+                    <CheckBox  x:Name="_1939_K1" Checked="_1939_K1_IsCheked" Unchecked="_1939_K1_Unchecked" Foreground="#FFF7F2F2">1939 K.cesme</CheckBox>
+                    <CheckBox  x:Name="_1941_E1" Checked="_1941_E1_IsCheked" Unchecked="_1941_E1_Unchecked" Foreground="#FFF7F2F2">1941 Eminonu</CheckBox>
+                    <CheckBox  x:Name="_1944_T1" Checked="_1944_T1_IsCheked" Unchecked="_1944_T1_Unchecked" Foreground="#FFF7F2F2">1944 Taksim</CheckBox>
                  
                     
                 </StackPanel>
             </Expander>
             <Expander x:Name="SatelliteMaps" Header="Satellite Maps" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">1946 Satellite Maps</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
+                    <CheckBox  x:Name="_1946_SAM1" Checked="_1946_SAM1_IsCheked" Unchecked="_1946_SAM1_Unchecked" Foreground="#FFF7F2F2">1946 Satellite Maps</CheckBox>
+                    <CheckBox  x:Name="_1966_SAM1" Checked="_1966_SAM1_IsCheked" Unchecked="_1966_SAM1_Unchecked" Foreground="#FFF7F2F2">1966 Satellite Maps</CheckBox>
+                    <CheckBox  x:Name="_1970_SAM1" Checked="_1970_SAM1_IsCheked" Unchecked="_1970_SAM1_Unchecked" Foreground="#FFF7F2F2">1970 Satellite Maps</CheckBox>
+                    <CheckBox  x:Name="_1982_SAM1" Checked="_1982_SAM1_IsCheked" Unchecked="_1982_SAM1_Unchecked" Foreground="#FFF7F2F2">1982 Satellite Maps</CheckBox>
                     
  
                 </StackPanel>
             </Expander>
             <Expander x:Name="MajorRoads" Header="Major Roads" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
+                    <CheckBox  x:Name="_1922_MR1" Checked="_1922_MR1_IsCheked" Unchecked="_1922_MR1_Unchecked" Foreground="#FFF7F2F2">1922 Major Roads</CheckBox>
+                    <CheckBox x:Name="_1946_MR1" Checked="_1946_MR1_IsCheked" Unchecked="_1946_MR1_Unchecked" Foreground="#FFF7F2F2">1946 Major Roads</CheckBox>
+                    <CheckBox x:Name="_1966_MR1"  Checked="_1966_MR1_IsCheked" Unchecked="_1966_MR1_Unchecked" Foreground="#FFF7F2F2">1966 Major Roads</CheckBox>
+                    <CheckBox x:Name="_1970_MR1"  Checked="_1970_MR1_IsCheked" Unchecked="_1970_MR1_Unchecked" Foreground="#FFF7F2F2">1970 Major Roads</CheckBox>
+                    <CheckBox x:Name="_1982_MR1"  Checked="_1982_MR1_IsCheked" Unchecked="_1982_MR1_Unchecked" Foreground="#FFF7F2F2">1982 Major Roads</CheckBox>
                    
                    
                 </StackPanel>
             </Expander>
             <Expander x:Name="SpacesofEverydayLife" Header="Spaces of Everyday Life" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">Beaches</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">Casinos</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">Spaces of Beyoglu</CheckBox>
+                    <CheckBox x:Name="B1"  Checked="B1_IsCheked" Unchecked="B1_Unchecked" Foreground="#FFF7F2F2">Beaches</CheckBox>
+                    <CheckBox x:Name="C1" Checked="C1_IsCheked" Unchecked="C1_Unchecked" Foreground="#FFF7F2F2">Casinos</CheckBox>
+                    <CheckBox x:Name="S1" Checked="S1_IsCheked" Unchecked="S1_Unchecked" Foreground="#FFF7F2F2">Spaces of Beyoglu</CheckBox>
                    
                    
                 </StackPanel>
             </Expander>
             <Expander x:Name="Transportation" Header="Transportation" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">1922 Ferry Map</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1922 Train Map</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1922 Tramway Map</CheckBox>
+                    <CheckBox x:Name="_1922_TF1" Checked="_1922_TF1_IsCheked" Unchecked="_1922_TF1_Unchecked" Foreground="#FFF7F2F2">1922 Ferry Map</CheckBox>
+                    <CheckBox x:Name="_1922_TT1" Checked="_1922_TT1_IsCheked" Unchecked="_1922_TT1_Unchecked" Foreground="#FFF7F2F2">1922 Train Map</CheckBox>
+                    <CheckBox x:Name="_1922_TWT1" Checked="_1922_TWT1_IsCheked" Unchecked="_1922_TWT1_Unchecked" Foreground="#FFF7F2F2">1922 Tramway Map</CheckBox>
                   
                     
                 </StackPanel>
             </Expander>
             <Expander x:Name="Photos" Header="Photos" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">All Photos</CheckBox>
+                    <CheckBox x:Name="P1" Checked="P1_IsCheked" Unchecked="P1_Unchecked" Foreground="#FFF7F2F2">All Photos</CheckBox>
                   
                 </StackPanel>
             </Expander>
             <Expander x:Name="MasterPlans" Header="Master Plans" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">Prost Transportation Study</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">Prost Master Plan Model</CheckBox>
+                    <CheckBox x:Name="_1_MP1" Checked="_1_MP1_IsCheked" Unchecked="_1_MP1_Unchecked" Foreground="#FFF7F2F2">Prost Transportation Study</CheckBox>
+                    <CheckBox x:Name="_2_MP1" Checked="_2_MP1_IsCheked" Unchecked="_2_MP1_Unchecked" Foreground="#FFF7F2F2">Prost Master Plan Model</CheckBox>
                 
                     
                 </StackPanel>
             </Expander>
             <Expander x:Name="CityGrowth" Header="City Growth" Foreground="#FFF0E7E7" FontSize="18">
                 <StackPanel>
-                    <CheckBox Foreground="#FFF7F2F2">1920-1994 Diagram</CheckBox>
-                    <CheckBox Foreground="#FFF7F2F2">1930 Municipal Border</CheckBox>
+                    <CheckBox x:Name="_1920_1994_CG1" Checked="_1920_1994_CG1_IsCheked" Unchecked="_1920_1994_CG1_Unchecked" Foreground="#FFF7F2F2">1920-1994 Diagram</CheckBox>
+                    <CheckBox x:Name="_1930_CG1" Checked="_1930_CG1_IsCheked" Unchecked="_1930_CG1_Unchecked" Foreground="#FFF7F2F2">1930 Municipal Border</CheckBox>
                    
                     
                 </StackPanel>
             </Expander>
             <Button x:Name="Add_CM" Content="Изменить" Margin="0,0,191,0" Height="39" Background="#FF24CB1C" Click="Add_CM_Click" Initialized="Add_initialaized"/>
         </StackPanel>
-        <Image x:Name="_1815_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1815_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
-            <Image x:Name="_1821_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1821_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
-            <Image x:Name="_1853_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1853_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-            <Image x:Name="_1860_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1860_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-            <Image x:Name="_1882_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1882_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-            <Image x:Name="_1913_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1913_CM.jpg" Margin="317,0,106,153"    Visibility="Hidden" />
-        <Image x:Name="_1918_CM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1918_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1899_RM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1899_RM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1900_RM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1900_RM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1875_SM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1875_SM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1865_SM" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1865_SM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1923_B" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1923_B.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1924_N" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1924_N.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1927_O" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1927_O.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1939_K" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1939_K.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1941_E" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1941_E.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
-        <Image x:Name="_1944_T" Source="C:\Users\пк\source\repos\Stambul_DB\Stambul_DB\Res\Maps\1944_T.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1815_CM" Source="1815_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
+            <Image x:Name="_1821_CM" Source="1821_CM.jpg" Margin="317,0,106,153" Visibility="Hidden" />
+            <Image x:Name="_1853_CM" Source="1853_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+            <Image x:Name="_1860_CM" Source="1860_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+            <Image x:Name="_1882_CM" Source="1882_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+            <Image x:Name="_1913_CM" Source="1913_CM.jpg" Margin="317,0,106,153"    Visibility="Hidden" />
+        <Image x:Name="_1918_CM" Source="1918_CM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1899_RM" Source="1899_RM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1900_RM" Source="1900_RM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1875_SM" Source="1875_SM.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1865_SM" Source="1865_SM.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1923_B" Source="1923_B.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1924_N" Source="1924_N.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1927_O" Source="1927_O.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1939_K" Source="1939_K.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1941_E" Source="1941_E.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1944_T" Source="1944_T.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1946_SAM" Source="1946_SAM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1966_SAM" Source="1966_SAM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1970_SAM" Source="1970_SAM.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1982_SAM" Source="1982_SAM.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1922_MR" Source="1922_MR.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1946_MR" Source="1946_MR.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1966_MR" Source="1966_MR.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1982_MR" Source="1982_MR.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="Beaches" Source="Beaches.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="Casinos" Source="Casinos.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="SpacesOfBeyoglu" Source="Spaces_of_Beyoglu.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1922_TF" Source="1922_TF.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1922_TT" Source="1922_TT.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1922_TWT" Source="1922_TWT.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1_MP" Source="1_MP.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_2_MP" Source="2_MP.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1920_1994_CG" Source="1920-1994_CG.jpg" Margin="317,0,106,153"  Visibility="Hidden"/>
+        <Image x:Name="_1930_CG" Source="1930_CG.JPG" Margin="317,0,106,153"  Visibility="Hidden"/>
     </Grid>
 </Window>

@@ -128,11 +128,20 @@
     <Compile Include="db\User.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CityMaps.xaml.cs">
+      <DependentUpon>CityMaps.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\IstanbulDB.xaml.cs">
       <DependentUpon>IstanbulDB.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PervetitichMaps.xaml.cs">
+      <DependentUpon>PervetitichMaps.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Redirection.xaml.cs">
       <DependentUpon>Redirection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegionalMaps.xaml.cs">
+      <DependentUpon>RegionalMaps.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
@@ -149,7 +158,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\CityMaps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\IstanbulDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PervetitichMaps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,12 +174,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\RegionalMaps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SpecialMaps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\SpecialMaps.xaml.cs">
+      <DependentUpon>SpecialMaps.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -200,7 +228,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Res\Icons\" />
     <Folder Include="Res\Maps\" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +241,43 @@
       <DependentUpon>Stambul_DB.edmx</DependentUpon>
       <LastGenOutput>Stambul_DB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Pages\1930_CG.JPG" />
+    <Resource Include="Pages\1920-1994_CG.jpg" />
+    <Resource Include="Pages\2_MP.jpg" />
+    <Resource Include="Pages\1_MP.JPG" />
+    <Resource Include="Pages\1922_TWT.JPG" />
+    <Resource Include="Pages\1922_TT.JPG" />
+    <Resource Include="Pages\1922_TF.JPG" />
+    <Resource Include="Pages\Spaces_of_Beyoglu.JPG" />
+    <Resource Include="Pages\Casinos.JPG" />
+    <Resource Include="Pages\Beaches.JPG" />
+    <Resource Include="Pages\1982_MR.JPG" />
+    <Resource Include="Pages\1966_MR.JPG" />
+    <Resource Include="Pages\1946_MR.jpg" />
+    <Resource Include="Pages\1922_MR.jpg" />
+    <Resource Include="Pages\1982_SAM.jpg" />
+    <Resource Include="Pages\1970_SAM.JPG" />
+    <Resource Include="Pages\1966_SAM.jpg" />
+    <Resource Include="Pages\1946_SAM.jpg" />
+    <Resource Include="Pages\1944_T.jpg" />
+    <Resource Include="Pages\1941_E.jpg" />
+    <Resource Include="Pages\1939_K.jpg" />
+    <Resource Include="Pages\1927_O.jpg" />
+    <Resource Include="Pages\1924_N.jpg" />
+    <Resource Include="Pages\1923_B.jpg" />
+    <Resource Include="Pages\1865_SM.JPG" />
+    <Resource Include="Pages\1875_SM.JPG" />
+    <Resource Include="Pages\1900_RM.jpg" />
+    <Resource Include="Pages\1899_RM.jpg" />
+    <Resource Include="Pages\1918_CM.jpg" />
+    <Resource Include="Pages\1913_CM.jpg" />
+    <Resource Include="Pages\1882_CM.jpg" />
+    <Resource Include="Pages\1860_CM.jpg" />
+    <Resource Include="Pages\1853_CM.jpg" />
+    <Resource Include="Pages\1821_CM.jpg" />
+    <Resource Include="Pages\1815_CM.jpg" />
+    <Resource Include="User.png" />
+    <Resource Include="Res\Icons\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

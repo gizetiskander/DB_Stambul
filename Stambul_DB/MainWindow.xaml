@@ -10,7 +10,7 @@
 
         <Ellipse HorizontalAlignment="Left" Height="100" Margin="653,157,0,0" Stroke="#FFF1E9E9" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.33,0.3">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="file:///C:/Users/пк/source/repos/Stambul_DB/Stambul_DB/Res/Icons/User.png"/>
+                <ImageBrush ImageSource="User.png"/>
             </Ellipse.Fill>
         </Ellipse>
         <TextBox x:Name="Login" HorizontalAlignment="Left" Height="45" Margin="545,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="26" Foreground="#FFB49696"/>
