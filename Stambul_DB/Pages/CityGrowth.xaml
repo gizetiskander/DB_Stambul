@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:Stambul_DB.Pages"
         mc:Ignorable="d"
         Title="CityGrowth" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="Add" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="ButtonAdd" Content="Save"/>
+            <Button x:Name="Delete" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="10" Click="ButtonDel" Content="Delete"/>
+            <Button x:Name="Back" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="1100,15" Content="Back" Click="Back_Click" />
+        </StackPanel>
+
+        <StackPanel>
+            <DataGrid AutoGenerateColumns="False" ColumnWidth="*" x:Name="City_Growth">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding id_City_Growth}" Width="100" Header="id_City_Growth"/>
+                    <DataGridTextColumn Binding="{Binding Diagram}"  Width="200" Header="Diagram"/>
+                    <DataGridTextColumn Binding="{Binding Municipal_Border}"  Width="100" Header="Municipal_Border"/>
+                    <DataGridTextColumn Binding="{Binding id_City_Maps}"  Width="100" Header="id_City_Maps"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </StackPanel>
+
     </Grid>
 </Window>

@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stambul_DB.Pages"
         mc:Ignorable="d"
-        Title="MasterPlan" Height="450" Width="800">
-    <Grid>
-        
+        Title="MasterPlan" Height="1024" Width="1440">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="Add" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="ButtonAdd" Content="Save"/>
+            <Button x:Name="Delete" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="10" Click="ButtonDel" Content="Delete"/>
+            <Button x:Name="Back" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="1100,15" Content="Back" Click="Back_Click" />
+        </StackPanel>
+
+        <StackPanel>
+            <DataGrid AutoGenerateColumns="False" ColumnWidth="*" x:Name="Master_Plan">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding id_Master_Plans}" Width="100" Header="id_Master_Plans"/>
+                    <DataGridTextColumn Binding="{Binding Prost_Master_Plan}"  Width="200" Header="Prost_Master_Plan"/>
+                    <DataGridTextColumn Binding="{Binding Prost_Master_Plan_Model}"  Width="100" Header="Prost_Master_Plan_Model"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </StackPanel>
+
     </Grid>
 </Window>
