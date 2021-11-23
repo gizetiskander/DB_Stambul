@@ -12,10 +12,10 @@ namespace Stambul_DB.db
     using System;
     using System.Collections.Generic;
     
-    public partial class Satelitte_Maps
+    public partial class Pervetitich_Maps
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Satelitte_Maps()
+        public Pervetitich_Maps()
         {
             this.Photos = new HashSet<Photos>();
         }

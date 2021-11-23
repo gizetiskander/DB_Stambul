@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Stambul_DB.db;
 using Stambul_DB.Pages;
@@ -18,22 +17,21 @@ using Stambul_DB.Pages;
 namespace Stambul_DB.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PervetitichMaps.xaml
+    /// Логика взаимодействия для Transportation.xaml
     /// </summary>
-    public partial class PervetitichMaps : Window
+    public partial class Transportation : Window
     {
         public static Istanbul_urban_dbEntities dbEntities = new Istanbul_urban_dbEntities();
-        public PervetitichMaps()
+        public Transportation()
         {
             InitializeComponent();
             dbEntities = new Istanbul_urban_dbEntities();
 
-            Pervetitich_Maps.ItemsSource = dbEntities.Pervetitich_Maps.ToList();
+            Transportation_Maps.ItemsSource = dbEntities.Transportation.ToList();
         }
-
-        private void ButtonAdd(object sender, RoutedEventArgs e)
+       /* private void ButtonAdd(object sender, RoutedEventArgs e)
         {
-            var q = Pervetitich_Maps.SelectedItem as Pervetitich_Maps;
+            var q = Transportation_Maps.SelectedItem as Transportation;
             if (q == null)
             {
                 MessageBox.Show("Эта строка пуста.");
@@ -46,7 +44,7 @@ namespace Stambul_DB.Pages
                 {
                     dbEntities.Pervetitich_Maps.Add(q);
                     dbEntities.SaveChanges();
-                    Pervetitich_Maps.ItemsSource = dbEntities.Pervetitich_Maps.ToList();
+                    Transportation_Maps.ItemsSource = dbEntities.Transportation.ToList();
                 }
                 catch
                 {
@@ -58,7 +56,7 @@ namespace Stambul_DB.Pages
 
         private void ButtonDel(object sender, RoutedEventArgs e)
         {
-            var q = Pervetitich_Maps.SelectedItem as Pervetitich_Maps;
+            var q = Transportation_Maps.SelectedItem as Transportation;
             if (q == null)
             {
                 MessageBox.Show("Эта строка и так пустая.");
@@ -69,9 +67,9 @@ namespace Stambul_DB.Pages
             {
                 try
                 {
-                    dbEntities.Pervetitich_Maps.Remove(q);
+                    dbEntities.Transportation.Remove(q);
                     dbEntities.SaveChanges();
-                    Pervetitich_Maps.ItemsSource = dbEntities.Pervetitich_Maps.ToList();
+                    Transportation_Maps.ItemsSource = dbEntities.Transportation.ToList();
                 }
                 catch
                 {
@@ -80,7 +78,7 @@ namespace Stambul_DB.Pages
 
             }
 
-        }
+        } */
 
 
         private void Back_Click(object sender, RoutedEventArgs e)

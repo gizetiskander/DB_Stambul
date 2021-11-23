@@ -31,7 +31,7 @@ namespace Stambul_DB.db
         public virtual DbSet<City_Maps> City_Maps { get; set; }
         public virtual DbSet<Major_Roads> Major_Roads { get; set; }
         public virtual DbSet<Master_Plans> Master_Plans { get; set; }
-        public virtual DbSet<Satelitte_Maps> Pervetitich_Maps { get; set; }
+        public virtual DbSet<Pervetitich_Maps> Pervetitich_Maps { get; set; }
         public virtual DbSet<Photos> Photos { get; set; }
         public virtual DbSet<Regional_Maps> Regional_Maps { get; set; }
         public virtual DbSet<Role> Role { get; set; }
@@ -97,7 +97,7 @@ namespace Stambul_DB.db
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
         }
     
-        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        public virtual int sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
         {
             var diagramnameParameter = diagramname != null ?
                 new ObjectParameter("diagramname", diagramname) :
@@ -107,10 +107,10 @@ namespace Stambul_DB.db
                 new ObjectParameter("owner_id", owner_id) :
                 new ObjectParameter("owner_id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
         }
     
-        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        public virtual int sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
         {
             var diagramnameParameter = diagramname != null ?
                 new ObjectParameter("diagramname", diagramname) :
@@ -120,7 +120,7 @@ namespace Stambul_DB.db
                 new ObjectParameter("owner_id", owner_id) :
                 new ObjectParameter("owner_id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
         }
     
         public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)

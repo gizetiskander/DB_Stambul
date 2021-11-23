@@ -29,7 +29,7 @@ namespace Stambul_DB.db
     
         public virtual City_Maps City_Maps { get; set; }
         public virtual Major_Roads Major_Roads { get; set; }
-        public virtual Satelitte_Maps Pervetitich_Maps { get; set; }
+        public virtual Pervetitich_Maps Pervetitich_Maps { get; set; }
         public virtual Regional_Maps Regional_Maps { get; set; }
         public virtual Satellite_Maps Satellite_Maps { get; set; }
         public virtual Spaces_of_Everyday_Life Spaces_of_Everyday_Life { get; set; }
