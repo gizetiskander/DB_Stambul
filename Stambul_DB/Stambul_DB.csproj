@@ -77,7 +77,7 @@
     <Compile Include="db\Master_Plans.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="db\Pervetitich_Maps.cs">
+    <Compile Include="db\Satelitte_Maps.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="db\Photos.cs">

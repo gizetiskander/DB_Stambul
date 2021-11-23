@@ -25,7 +25,7 @@
 
                         <DataGridTextColumn Binding="{Binding id_City_Maps}" Width="100" Header="Id_City_Maps"/>
                         <DataGridTextColumn Binding="{Binding Year_CM}"  Width="200" Header="Year_CM"/>
-                        <DataGridTextColumn Binding="{Binding Image_Cm}"  Width="100" Header="Image_CM"/>
+                        <DataGridTextColumn Binding="{Binding Image_CM}"  Width="100" Header="Image_CM"/>
                     <DataGridTextColumn Binding="{Binding Id_User}"  Width="100" Header="Id_User"/>
                 </DataGrid.Columns>
 

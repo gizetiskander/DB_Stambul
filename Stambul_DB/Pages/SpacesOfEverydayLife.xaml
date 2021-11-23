@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stambul_DB.Pages"
         mc:Ignorable="d"
-        Title="SpacesOfEverydayLife" Height="450" Width="800">
-    <Grid>
-        
+        Title="SpacesOfEverydayLife" Height="1024" Width="1440">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="Add" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="ButtonAdd" Content="Save"/>
+            <Button x:Name="Delete" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="10" Click="ButtonDel" Content="Delete"/>
+            <Button x:Name="Back" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="1100,15" Content="Back" Click="Back_Click" />
+        </StackPanel>
+
+        <StackPanel>
+            <DataGrid AutoGenerateColumns="False" ColumnWidth="*" x:Name="Spaces_Of_Everyday_Life">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Binding="{Binding Id_Spaces_of_Everyday_Life}" Width="100" Header="Id_Spaces_of_Everyday_Life"/>
+                    <DataGridTextColumn Binding="{Binding Beaches}"  Width="200" Header="Beaches"/>
+                    <DataGridTextColumn Binding="{Binding Casinos}"  Width="100" Header="Casinos"/>
+                    <DataGridTextColumn Binding="{Binding Spaces_of_Beyoglu}"  Width="100" Header="Spaces_of_Beyoglu"/>
+                    <DataGridTextColumn Binding="{Binding Image_SEL}"  Width="100" Header="Image_SEL"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </StackPanel>
+
     </Grid>
 </Window>
