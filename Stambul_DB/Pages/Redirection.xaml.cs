@@ -52,12 +52,7 @@ namespace Stambul_DB.Pages
             pm.Show();
         }
 
-        private void Redirection_T_Click(object sender, RoutedEventArgs e)
-        {
-            Transportation t = new Transportation();
-            this.Close();
-            t.Show();
-        } 
+  
 
         private void Redirection_SAM_Click(object sender, RoutedEventArgs e)
         {

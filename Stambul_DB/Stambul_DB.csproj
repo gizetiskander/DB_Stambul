@@ -98,6 +98,12 @@
     <Compile Include="db\Special_Maps.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="db\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Stambul_DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="db\Stambul_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,10 +215,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Transportation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\SatelitteMaps.xaml.cs">
@@ -223,9 +225,6 @@
     </Compile>
     <Compile Include="Pages\SpecialMaps.xaml.cs">
       <DependentUpon>SpecialMaps.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Transportation.xaml.cs">
-      <DependentUpon>Transportation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
