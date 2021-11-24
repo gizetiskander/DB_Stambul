@@ -12,7 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
+using System.Data.SqlClient;
+using System.Data.Common;
+using Microsoft.Win32;
 using Stambul_DB.db;
+using System.IO;
+using System.Data;
 
 namespace Stambul_DB.Pages
 {
@@ -24,6 +30,7 @@ namespace Stambul_DB.Pages
     {
         public static Istanbul_urban_dbEntities dbEntities = new Istanbul_urban_dbEntities();
         public static User authUser;
+
         public IstanbulDB()
         {
             InitializeComponent();
@@ -41,7 +48,7 @@ namespace Stambul_DB.Pages
                 _1913_CM1.Visibility = Visibility.Hidden;
                 _1918_CM1.Visibility = Visibility.Hidden;
             }
-            
+
         }
 
         private void _1815_CM1_Unchecked(object sender, RoutedEventArgs e)
@@ -229,7 +236,7 @@ namespace Stambul_DB.Pages
         private void _1899_RM1_IsCheked(object sender, RoutedEventArgs e)
         {
             _1899_RM.Visibility = Visibility.Visible;
-            if(_1899_RM1.IsChecked == true)
+            if (_1899_RM1.IsChecked == true)
             {
                 _1900_RM1.Visibility = Visibility.Hidden;
             }
@@ -595,7 +602,7 @@ namespace Stambul_DB.Pages
             {
                 C1.Visibility = Visibility.Hidden;
                 S1.Visibility = Visibility.Hidden;
-               
+
             }
         }
         private void B1_Unchecked(object sender, RoutedEventArgs e)
@@ -744,6 +751,24 @@ namespace Stambul_DB.Pages
         {
             _1930_CG.Visibility = Visibility.Hidden;
             _1920_1994_CG1.Visibility = Visibility.Visible;
+        }
+
+        private void Add_I_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofdImage = new OpenFileDialog();
+            ofdImage.Filter = "Image files|*.bmp;*.jpg;*.png|All files|*.*";
+            ofdImage.FilterIndex = 1;
+            if (ofdImage.ShowDialog() == true)
+            {
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.UriSource = new Uri(ofdImage.FileName);
+                image.EndInit();
+                City_Maps cm = new City_Maps();
+                playim.Source = image;
+                cm.Image_CM = File.ReadAllBytes(ofdImage.FileName);
+            }
+
         }
     }
 }

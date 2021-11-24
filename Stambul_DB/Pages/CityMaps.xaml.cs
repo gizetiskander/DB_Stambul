@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using Stambul_DB.db;
 using Stambul_DB.Pages;
 
@@ -90,5 +92,23 @@ namespace Stambul_DB.Pages
             this.Close();
             r.Show();
         }
+
+        private void Add_I_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofdImage = new OpenFileDialog();
+            ofdImage.Filter = "Image files|*.bmp;*.jpg;*.png|All files|*.*";
+            ofdImage.FilterIndex = 1;
+            if (ofdImage.ShowDialog() == true)
+            {
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.UriSource = new Uri(ofdImage.FileName);
+                image.EndInit();
+                City_Maps cm = new City_Maps();
+                playim.Source = image;
+                cm.Image_CM = File.ReadAllBytes(ofdImage.FileName);
+            }
+        }
+
     }
 }
