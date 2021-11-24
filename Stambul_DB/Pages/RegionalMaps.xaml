@@ -13,8 +13,10 @@
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
+
             <Button x:Name="Add" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="ButtonAdd" Content="Save"/>
             <Button x:Name="Delete" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="10" Click="ButtonDel" Content="Delete"/>
+            <Button x:Name="SaveImage" FontFamily="Arial" FontSize="14" Width="100" Height="40" Click="Add_I_Click" Content="Save Image"/>
             <Button x:Name="Back" FontFamily="Arial" FontSize="14" Width="100" Height="40" Margin="1100,15" Content="Back" Click="Back_Click" />
         </StackPanel>
 
@@ -25,10 +27,11 @@
                     <DataGridTextColumn Binding="{Binding id_Regional_Maps}" Width="100" Header="id_Regional_Maps"/>
                     <DataGridTextColumn Binding="{Binding Year_RM}"  Width="200" Header="Year_RM"/>
                     <DataGridTextColumn Binding="{Binding Image_RM}"  Width="100" Header="Image_RM"/>
+                    
                 </DataGrid.Columns>
 
             </DataGrid>
         </StackPanel>
-
+        <Image x:Name="playim"  HorizontalAlignment="Left" Height="170" Margin="714,313,0,0" VerticalAlignment="Top" Width="192" Visibility="Hidden"/>
     </Grid>
 </Window>

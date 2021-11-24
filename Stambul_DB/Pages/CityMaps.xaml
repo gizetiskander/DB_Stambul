@@ -21,17 +21,25 @@
         </StackPanel>
 
             <StackPanel>
-                <DataGrid AutoGenerateColumns="False" ColumnWidth="*" x:Name="City_Maps">
-                    <DataGrid.Columns>
-
-                        <DataGridTextColumn Binding="{Binding id_City_Maps}" Width="100" Header="Id_City_Maps"/>
-                        <DataGridTextColumn Binding="{Binding Year_CM}"  Width="200" Header="Year_CM"/>
-                        <DataGridTextColumn x:Name="Image_CM" Binding="{Binding Image_CM}"  Width="100" Header="Image_CM"/>
-                    <DataGridTextColumn Binding="{Binding Id_User}"  Width="100" Header="Id_User"/>
-                </DataGrid.Columns>
-
-                </DataGrid>
+            <ListView x:Name="City_Maps">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding id_City_Maps}" 
+                      Header="id_City_Maps" Width="100"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Year_CM}" 
+                      Header="Year_CM" Width="100"/>
+                        <GridViewColumn x:Name="Image_CM" Header="Image_CM" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image x:Name="image_1" Source="{Binding Image_CM}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+              
             </StackPanel>
-        <Image x:Name="playim"  HorizontalAlignment="Left" Height="170" Margin="714,313,0,0" VerticalAlignment="Top" Width="192"/>
+        <Image x:Name="playim"  HorizontalAlignment="Left" Height="170" Margin="714,313,0,0" VerticalAlignment="Top" Width="192" Visibility="Hidden"/>
     </Grid>
 </Window>

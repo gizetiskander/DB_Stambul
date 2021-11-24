@@ -98,12 +98,6 @@
     <Compile Include="db\Special_Maps.cs">
       <DependentUpon>Stambul_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="db\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Stambul_DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Stambul_DB.tt</DependentUpon>
-    </Compile>
     <Compile Include="db\Stambul_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

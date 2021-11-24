@@ -107,6 +107,8 @@ namespace Stambul_DB.Pages
                 City_Maps cm = new City_Maps();
                 playim.Source = image;
                 cm.Image_CM = File.ReadAllBytes(ofdImage.FileName);
+                dbEntities.City_Maps.Add(cm);
+                dbEntities.SaveChanges();
             }
         }
 
